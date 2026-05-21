@@ -4,15 +4,15 @@
     "date": "2026.02.27",
     "title": "[2026 소비자 선정 최고의 브랜드 대상] 에프유피글로벌파트너스",
     "desc": "AI 기술과 마케팅의 기반 전략을 중심으로 글로벌 뷰티, 라이프스타일 브랜드, 화학, 글로벌 브랜딩 및 컨설팅을 제공하는 에프유피글로벌파트너스가 '2026년도 소비자 선정 최고의 브랜드 대상'을 수상했다.",
-    "image": "news-01-brand.jpg",
-    "link": ""
+    "image": "article-01-forbes2026.jpg",
+    "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=401647"
   },
   {
     "id": "news-2026-0119",
     "date": "2026.01.19",
     "title": "[2025 국민브랜드대상] 이준석 에프유피글로벌파트너스 대표, CEO 부문 대상",
     "desc": "이준석 대표가 국민일보 주최 2025 국민브랜드대상에서 CEO 부문 대상을 수상하며 리더십을 인정받았다.",
-    "image": "news-05-forbes-profile.jpg",
+    "image": "article-02-forbes2025.jpg",
     "link": ""
   },
   {
@@ -28,15 +28,15 @@
     "date": "2025.11.03",
     "title": "와이낫 글로벌 이니셔티브, 중기부 '메인비즈' 인증·ISO 국제표준 획득",
     "desc": "중소벤처기업부 '메인비즈(MAIN-BIZ)' 인증과 ISO 9001·14001·45001 국제표준 인증을 동시 획득했다.",
-    "image": "news-04-iso.jpg",
-    "link": ""
+    "image": "article-03-iso.jpg",
+    "link": "https://news.nate.com/view/20250305n30126"
   },
   {
     "id": "news-2025-0926",
     "date": "2025.09.26",
     "title": "[2025 대한민국 신뢰받는 혁신대상] 품질혁신 대상 — 에프유피글로벌파트너스",
     "desc": "에프유피글로벌파트너스가 '2025 대한민국 신뢰받는 혁신대상'에서 품질혁신 부문 대상을 수상했다.",
-    "image": "news-08-forbes-color.jpg",
+    "image": "article-02-forbes2025.jpg",
     "link": ""
   },
   {
@@ -44,8 +44,8 @@
     "date": "2025.09.29",
     "title": "에프유피글로벌파트너스, 뉴 브랜드 화 공개",
     "desc": "포브스 코리아를 통해 새로운 브랜드 비전과 방향성을 공식 발표했다.",
-    "image": "news-02-forbes-award.jpg",
-    "link": ""
+    "image": "article-04-beauty.jpg",
+    "link": "https://news.nate.com/view/20250430n21391"
   },
   {
     "id": "news-2025-0911",
@@ -60,15 +60,15 @@
     "date": "2025.07.15",
     "title": "에프유피글로벌파트너스, 태국 KP아트센터 브랜딩 프로젝트 수주",
     "desc": "태국 KP아트센터의 공간 브랜딩 프로젝트를 수주하며 글로벌 브랜딩 역량을 입증했다.",
-    "image": "news-06-venture.jpg",
-    "link": ""
+    "image": "article-05-luxury.jpg",
+    "link": "https://news.nate.com/view/20250709n24163"
   },
   {
     "id": "news-2025-0715a",
     "date": "2025.07.15",
     "title": "에프유피글로벌파트너스, '벤처기업' 공식 인증 획득",
     "desc": "중소벤처기업부 벤처기업 확인서를 받으며 기술 혁신 기업으로서의 역량을 인정받았다.",
-    "image": "news-06-venture.jpg",
-    "link": ""
+    "image": "article-05-luxury.jpg",
+    "link": "https://news.nate.com/view/20250709n24163"
   }
 ]
