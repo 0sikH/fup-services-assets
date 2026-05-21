@@ -128,6 +128,14 @@
     "link": "https://n.news.naver.com/article/015/0005126042?sid=101"
   },
   {
+    "id": "news-2024-0416",
+    "date": "2024.04.16",
+    "title": "와이낫 포토그래피 이준석 대표, \"AI 기반 콘텐츠 산업 트렌드 메이커로 성장할 것\"",
+    "desc": "AI 기술을 활용한 사후 배리에이션, AI 아나운서 서비스 등으로 브랜드 마케팅 솔루션 제공자로 성장하겠다고 밝혔다.",
+    "image": "article-22-bigdata.jpg",
+    "link": "https://www.thebigdata.co.kr/view.php?ud=2024041613475299479aeda69934_23"
+  },
+  {
     "id": "news-2024-1230",
     "date": "2024.12.30",
     "title": "와이낫 글로벌 이니셔티브, '2024 브랜드 대상 1위' 수상",
@@ -150,5 +158,21 @@
     "desc": "7년간 '와이낫 포토그래피'로 업계에 입지를 다진 와이낫 글로벌 이니셔티브가 사명 변경 및 매출 50억 원을 달성했다.",
     "image": "article-07-whynot-50billion.jpg",
     "link": "https://www.joongang.co.kr/article/25291465"
+  },
+  {
+    "id": "news-2021-1005",
+    "date": "2021.10.05",
+    "title": "와이낫 포토그래피, 콘텐츠와 브랜딩 솔루션 결합한 '와이낫 솔루션' 출시",
+    "desc": "기존 스튜디오 서비스를 넘어 콘텐츠 제작, 플랫폼 전략, 캠페인 매니지먼트까지 아우르는 종합 솔루션을 출시했다.",
+    "image": "article-20-sedaily.jpg",
+    "link": "https://www.sedaily.com/article/13198613"
+  },
+  {
+    "id": "news-2019-0911",
+    "date": "2019.09.11",
+    "title": "강남스튜디오 '와이낫포토그래피', 제품촬영 및 컨셉기획 등 다양한 서비스 제공",
+    "desc": "서초구 논현역의 와이낫포토그래피는 제품사진촬영, 패션화보, 기업영상 등을 전문 제작하는 종합컨텐츠메이커로 KAPA 2년 연속 수상 업체이다.",
+    "image": "article-19-whynot-studio.jpg",
+    "link": "https://www.gokorea.kr/news/articleView.html?idxno=404539"
   }
 ]
