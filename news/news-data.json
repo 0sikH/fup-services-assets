@@ -8,100 +8,124 @@
     "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205485"
   },
   {
-    "id": "news-2026-0227",
+    "id": "news-2026-0227b",
     "date": "2026.02.27",
     "title": "[2026 소비자 선정 최고의 브랜드 대상] 에프유피글로벌파트너스",
-    "desc": "AI 기술과 마케팅의 기반 전략을 중심으로 글로벌 뷰티, 라이프스타일 브랜드, 화학, 글로벌 브랜딩 및 컨설팅을 제공하는 에프유피글로벌파트너스가 '2026년도 소비자 선정 최고의 브랜드 대상'을 수상했다.",
+    "desc": "에프유피글로벌파트너스가 포브스코리아 주최 '2026 소비자 선정 최고의 브랜드 대상'을 수상했다.",
+    "image": "article-17-forbes2026-fup.jpg",
+    "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=401586"
+  },
+  {
+    "id": "news-2026-0227a",
+    "date": "2026.02.27",
+    "title": "[2026 소비자 선정 최고의 브랜드 대상] 선정명단 발표",
+    "desc": "포브스코리아와 중앙일보가 주최한 '2026 소비자 선정 최고의 브랜드 대상' 수상 기업이 발표되었다.",
     "image": "article-01-forbes2026.jpg",
     "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=401647"
   },
   {
-    "id": "news-2026-0119",
-    "date": "2026.01.19",
+    "id": "news-2026-0115",
+    "date": "2026.01.15",
     "title": "[2025 국민브랜드대상] 이준석 에프유피글로벌파트너스 대표, CEO 부문 대상",
     "desc": "이준석 대표가 국민일보 주최 2025 국민브랜드대상에서 CEO 부문 대상을 수상하며 리더십을 인정받았다.",
-    "image": "article-02-forbes2025.jpg",
-    "link": "https://news.nate.com/view/20251219n25383"
+    "image": "article-16-kmib-ceo.jpg",
+    "link": "https://www.kmib.co.kr/article/view.asp?arcid=0029256369"
   },
   {
     "id": "news-2025-1219",
     "date": "2025.12.19",
     "title": "국민일보 '2025 국민브랜드대상' 시상식 개최",
-    "desc": "국민일보 주최 '2025 올해의 국민 브랜드 대상' 시상식이 성대히 개최되었다.",
-    "image": "news-03-brand-award.jpg",
-    "link": "https://www.kmib.co.kr/article/view_amp.asp?arcid=0029138625"
+    "desc": "국민일보 주최 '2025 올해의 국민 브랜드 대상' 시상식이 서울 백범김구기념관에서 성대히 개최되었다.",
+    "image": "article-15-kmib-ceremony.jpg",
+    "link": "https://www.kmib.co.kr/article/view.asp?arcid=0029138625&code=61141111&cp=nv"
   },
   {
     "id": "news-2025-1103",
     "date": "2025.11.03",
     "title": "와이낫 글로벌 이니셔티브, 중기부 '메인비즈' 인증·ISO 국제표준 획득",
     "desc": "중소벤처기업부 '메인비즈(MAIN-BIZ)' 인증과 ISO 9001·14001·45001 국제표준 인증을 동시 획득했다.",
-    "image": "article-03-iso.jpg",
-    "link": "https://news.nate.com/view/20250305n30126"
+    "image": "article-14-sentv-mainbiz.jpg",
+    "link": "https://m.sentv.co.kr/article/view/sentv202510310084"
   },
   {
     "id": "news-2025-0926",
     "date": "2025.09.26",
     "title": "[2025 대한민국 신뢰받는 혁신대상] 품질혁신 대상 — 에프유피글로벌파트너스",
     "desc": "에프유피글로벌파트너스가 '2025 대한민국 신뢰받는 혁신대상'에서 품질혁신 부문 대상을 수상했다.",
-    "image": "article-02-forbes2025.jpg",
+    "image": "article-13-forbes-innovation.jpg",
+    "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=400631"
+  },
+  {
+    "id": "news-2025-0924",
+    "date": "2025.09.24",
+    "title": "에프유피글로벌파트너스, 새 브랜드 BI 공개",
+    "desc": "리본 형태의 'F'를 45°로 전개한 새로운 BI를 공개하며 지주회사 전환과 글로벌 확장 전략에 속도를 낸다.",
+    "image": "news-01-brand.jpg",
     "link": "https://www.fupglobalpartners.com/"
   },
   {
-    "id": "news-2025-0929",
-    "date": "2025.09.29",
-    "title": "에프유피글로벌파트너스, 뉴 브랜드 화 공개",
-    "desc": "포브스 코리아를 통해 새로운 브랜드 비전과 방향성을 공식 발표했다.",
-    "image": "article-04-beauty.jpg",
-    "link": "https://news.nate.com/view/20250430n21391"
-  },
-  {
-    "id": "news-2025-0911",
-    "date": "2025.09.11",
+    "id": "news-2025-0912",
+    "date": "2025.09.12",
     "title": "에프유피글로벌파트너스, 앰비션과 전략적 MOU 체결",
-    "desc": "앰비션(AMBITION)과 전략적 파트너십을 체결하며 사업 영역 확장에 나섰다.",
+    "desc": "맞춤형 기능성 화장품의 공동 연구 및 글로벌 유통 확대를 위한 업무협약을 체결했다.",
     "image": "news-07-ambition.jpg",
     "link": "https://www.fupglobalpartners.com/"
   },
   {
-    "id": "news-2025-0715b",
-    "date": "2025.07.15",
-    "title": "에프유피글로벌파트너스, 태국 KP아트센터 브랜딩 프로젝트 수주",
-    "desc": "태국 KP아트센터의 공간 브랜딩 프로젝트를 수주하며 글로벌 브랜딩 역량을 입증했다.",
+    "id": "news-2025-0709",
+    "date": "2025.07.09",
+    "title": "에프유피글로벌파트너스, '혁신성장유형 벤처기업' 인증 획득",
+    "desc": "중소벤처기업부로부터 혁신성장유형 벤처기업 인증을 획득하며 AI 기반 뷰티테크 기술력을 인정받았다.",
     "image": "article-05-luxury.jpg",
-    "link": "https://news.nate.com/view/20250709n24163"
+    "link": "https://www.hankyung.com/article/202507097442O"
   },
   {
-    "id": "news-2025-0715a",
-    "date": "2025.07.15",
-    "title": "에프유피글로벌파트너스, '벤처기업' 공식 인증 획득",
-    "desc": "중소벤처기업부 벤처기업 확인서를 받으며 기술 혁신 기업으로서의 역량을 인정받았다.",
-    "image": "article-05-luxury.jpg",
-    "link": "https://news.nate.com/view/20250709n24163"
+    "id": "news-2025-0305",
+    "date": "2025.03.05",
+    "title": "에프유피글로벌파트너스, ISO 9001·14001·45001 국제표준 3종 인증 획득",
+    "desc": "품질·환경·안전보건 경영시스템 국제표준 인증 3종을 동시 획득했다.",
+    "image": "article-03-iso.jpg",
+    "link": "https://n.news.naver.com/article/015/0005102326?sid=101"
   },
   {
     "id": "news-2025-0304",
     "date": "2025.03.04",
     "title": "[2025 소비자 선정 최고의 브랜드 대상] 와이낫 글로벌 이니셔티브, 화장품 제조 부문 1위",
-    "desc": "와이낫 글로벌 이니셔티브가 포브스코리아 주최 '2025 소비자 선정 최고의 브랜드 대상'에서 화장품 제조 부문 1위를 수상했다.",
+    "desc": "와이낫 글로벌 이니셔티브가 포브스코리아 주최 '소비자 선정 최고의 브랜드 대상'에서 화장품 제조 부문 1위를 수상했다.",
     "image": "article-06-nate-brand.jpg",
     "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=340869"
   },
   {
     "id": "news-2025-0320",
     "date": "2025.03.20",
-    "title": "에프유피글로벌파트너스, 고급 화장품 브랜드 인증 획득",
-    "desc": "소비자 만족도 높은 뷰티 브랜드로서 고급 화장품 인증을 획득했다.",
+    "title": "에프유피글로벌파트너스, 프리미엄 화장품 브랜드 인증 획득",
+    "desc": "소비자 만족도 높은 뷰티 브랜드로서 프리미엄 화장품 인증을 획득했다.",
     "image": "article-09-cosmetics.jpg",
-    "link": "https://news.nate.com/view/20250320n27809"
+    "link": "https://n.news.naver.com/article/015/0005108536?sid=101"
   },
   {
-    "id": "news-2024-1209",
-    "date": "2024.12.09",
-    "title": "와이낫 글로벌 이니셔티브, '2024 올해의 우수브랜드 대상' 종합광고대행사 부문 1위 수상",
-    "desc": "JY네트워크 주최, 중앙일보 후원 '2024 올해의 우수 브랜드 대상'에서 종합광고대행사 부문 1위를 수상했다.",
-    "image": "article-08-brand-award-2024.jpg",
-    "link": "https://news.nate.com/view/20241209n14152"
+    "id": "news-2025-0430",
+    "date": "2025.04.30",
+    "title": "에프유피글로벌파트너스, AI 기반 뷰티 솔루션으로 글로벌 시장 공략",
+    "desc": "AI 기술과 바이오 기술을 결합한 맞춤형 화장품 제조로 글로벌 뷰티 시장 확장에 나섰다.",
+    "image": "article-04-beauty.jpg",
+    "link": "https://n.news.naver.com/article/015/0005126042?sid=101"
+  },
+  {
+    "id": "news-2024-1230",
+    "date": "2024.12.30",
+    "title": "와이낫 글로벌 이니셔티브, '2024 브랜드 대상 1위' 수상",
+    "desc": "종합 광고 대행사 부문에서 '2024 브랜드 대상 1위'를 수상하며 독창적인 비즈니스 모델과 글로벌 비전을 입증했다.",
+    "image": "article-12-fnnews.jpg",
+    "link": "https://www.fnnews.com/news/202412301158211486"
+  },
+  {
+    "id": "news-2024-1213",
+    "date": "2024.12.13",
+    "title": "와이낫 글로벌 이니셔티브, \"기술과 혁신으로 글로벌 뷰티 시장 선두주자로 도약할 것\"",
+    "desc": "줄기세포 기반 화장품 제조와 AI 데이터 분석 기술로 글로벌 뷰티 시장 선두주자 도약을 선언했다.",
+    "image": "article-11-digitalchosun.jpg",
+    "link": "https://digitalchosun.dizzo.com/site/data/html_dir/2024/12/13/2024121380131.html"
   },
   {
     "id": "news-2024-1112",
@@ -109,6 +133,6 @@
     "title": "와이낫 글로벌 이니셔티브, 사명 바꾸고 매출 50억 달성",
     "desc": "7년간 '와이낫 포토그래피'로 업계에 입지를 다진 와이낫 글로벌 이니셔티브가 사명 변경 및 매출 50억 원을 달성했다.",
     "image": "article-07-whynot-50billion.jpg",
-    "link": "https://v.daum.net/v/20241112171024240"
+    "link": "https://www.joongang.co.kr/article/25291465"
   }
 ]
