@@ -70,5 +70,37 @@
     "desc": "중소벤처기업부 벤처기업 확인서를 받으며 기술 혁신 기업으로서의 역량을 인정받았다.",
     "image": "article-05-luxury.jpg",
     "link": "https://news.nate.com/view/20250709n24163"
+  },
+  {
+    "id": "news-2025-0304",
+    "date": "2025.03.04",
+    "title": "[2025 소비자 선정 최고의 브랜드 대상] 와이낫 글로벌 이니셔티브, 화장품 제조 부문 1위",
+    "desc": "와이낫 글로벌 이니셔티브가 포브스코리아 주최 '2025 소비자 선정 최고의 브랜드 대상'에서 화장품 제조 부문 1위를 수상했다.",
+    "image": "article-06-nate-brand.jpg",
+    "link": "https://www.forbeskorea.co.kr/news/articleView.html?idxno=340869"
+  },
+  {
+    "id": "news-2025-0320",
+    "date": "2025.03.20",
+    "title": "에프유피글로벌파트너스, 고급 화장품 브랜드 인증 획득",
+    "desc": "소비자 만족도 높은 뷰티 브랜드로서 고급 화장품 인증을 획득했다.",
+    "image": "article-09-cosmetics.jpg",
+    "link": "https://news.nate.com/view/20250320n27809"
+  },
+  {
+    "id": "news-2024-1209",
+    "date": "2024.12.09",
+    "title": "와이낫 글로벌 이니셔티브, '2024 올해의 우수브랜드 대상' 종합광고대행사 부문 1위 수상",
+    "desc": "JY네트워크 주최, 중앙일보 후원 '2024 올해의 우수 브랜드 대상'에서 종합광고대행사 부문 1위를 수상했다.",
+    "image": "article-08-brand-award-2024.jpg",
+    "link": "https://news.nate.com/view/20241209n14152"
+  },
+  {
+    "id": "news-2024-1112",
+    "date": "2024.11.12",
+    "title": "와이낫 글로벌 이니셔티브, 사명 바꾸고 매출 50억 달성",
+    "desc": "7년간 '와이낫 포토그래피'로 업계에 입지를 다진 와이낫 글로벌 이니셔티브가 사명 변경 및 매출 50억 원을 달성했다.",
+    "image": "article-07-whynot-50billion.jpg",
+    "link": "https://v.daum.net/v/20241112171024240"
   }
 ]
