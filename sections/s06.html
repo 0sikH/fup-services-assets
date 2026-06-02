@@ -24,11 +24,12 @@ img{display:block;max-width:100%}
 .group-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:64px;max-width:1100px;margin-left:auto;margin-right:auto}
 .g-item{width:33.33%;height:140px;display:flex;align-items:center;justify-content:center;padding:24px;transition:all 0.4s}
 .g-item img{max-height:56px;max-width:240px;filter:brightness(0) invert(1);opacity:0.55;transition:opacity 0.4s}
+.g-logo-raw{filter:none!important;max-height:73px!important;max-width:312px!important}
 .g-item:hover img{opacity:1}
 @media(max-width:768px){
   .group-grid{display:grid!important;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px;padding:0 16px}
   .g-item{width:100%!important;height:56px;padding:10px;overflow:hidden}
-  .g-item img{max-height:20px!important;max-width:100%!important;width:auto!important;object-fit:contain}
+  .g-item img,.g-item img.g-logo-raw{max-height:20px!important;max-width:100%!important;width:auto!important;object-fit:contain;filter:brightness(0) invert(1)!important}
 }
 </style>
 
@@ -37,8 +38,8 @@ img{display:block;max-width:100%}
   <h2 class="sec-heading reveal">FUP 관계사</h2>
   <p class="sec-desc reveal" style="margin:0 auto">뷰티, 콘텐츠, 유통, 컨설팅을 아우르는 그룹 네트워크</p>
   <div class="group-grid">
-    <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-wgi-w.png" alt="WhyNot Global Initiative" style="filter:none!important;max-height:73px!important;max-width:312px!important" /></div>
-    <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-fup-w.png" alt="FUP Global Partners" style="filter:none!important;max-height:73px!important;max-width:312px!important" /></div>
+    <div class="g-item reveal"><img class="g-logo-raw" src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-wgi-w.png" alt="WhyNot Global Initiative" /></div>
+    <div class="g-item reveal"><img class="g-logo-raw" src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-fup-w.png" alt="FUP Global Partners" /></div>
     <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-luacell.png" alt="Luacell" /></div>
     <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-luxeflora.png" alt="Luxe Flora" /></div>
     <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-bbintl.png" alt="BB International" /></div>
