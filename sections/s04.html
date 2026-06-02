@@ -25,13 +25,14 @@ img{display:block;max-width:100%}
 .biz-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .biz-sticky-header{padding:0 20vw 32px;text-align:left}
 .biz-scroll-track{display:flex;gap:24px;padding:0 calc(50vw - 19vw);will-change:transform}
-.biz-slide{width:38vw;max-width:450px;height:calc((100vh - 320px) * 0.7);min-height:220px;position:relative;overflow:hidden;border-radius:18px;flex-shrink:0;cursor:pointer}
+.biz-slide{width:38vw;max-width:450px;height:calc((100vh - 320px) * 0.7);min-height:220px;position:relative;overflow:hidden;border-radius:18px;flex-shrink:0;cursor:pointer;filter:brightness(0.4);transition:filter 0.5s ease,transform 0.5s ease;transform:scale(0.95)}
+.biz-slide.active{filter:brightness(1);transform:scale(1)}
 .biz-slide-bg{position:absolute;inset:0}
 .biz-slide-bg img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
 .biz-slide:hover .biz-slide-bg img{transform:scale(1.04)}
 .biz-slide-bg.zoom img{transform:scale(2)}
 .biz-slide:hover .biz-slide-bg.zoom img{transform:scale(2.08)}
-.biz-slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.6) 40%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.3) 100%)}
+.biz-slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.75) 35%,rgba(0,0,0,0.3) 65%,rgba(0,0,0,0.35) 100%)}
 .biz-slide-content{position:absolute;bottom:0;left:0;right:0;padding:48px 44px;z-index:1}
 .biz-slide-num{font-size:clamp(60px,8vw,100px);font-weight:900;background:linear-gradient(135deg,rgba(45,212,168,0.25),rgba(45,212,168,0.08));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:-8px;letter-spacing:-3px}
 .biz-slide-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
@@ -123,6 +124,7 @@ img{display:block;max-width:100%}
     track.style.transform='translateX('+ (-progress*totalScroll) +'px)';
     var idx=Math.min(3,Math.floor(progress*4));
     dots.forEach(function(d,i){d.classList.toggle('active',i===idx)});
+    slides.forEach(function(s,i){s.classList.toggle('active',i===idx)});
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
