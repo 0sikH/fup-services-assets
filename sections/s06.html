@@ -26,9 +26,9 @@ img{display:block;max-width:100%}
 .g-item img{max-height:56px;max-width:240px;filter:brightness(0) invert(1);opacity:0.55;transition:opacity 0.4s}
 .g-item:hover img{opacity:1}
 @media(max-width:768px){
-  .group-grid{display:grid!important;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px}
-  .g-item{width:100%!important;height:60px;padding:12px}
-  .g-item img{max-height:22px!important;max-width:140px!important}
+  .group-grid{display:grid!important;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px;padding:0 16px}
+  .g-item{width:100%!important;height:56px;padding:10px;overflow:hidden}
+  .g-item img{max-height:20px!important;max-width:100%!important;width:auto!important;object-fit:contain}
 }
 </style>
 
