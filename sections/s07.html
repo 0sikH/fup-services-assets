@@ -22,12 +22,12 @@ img{display:block;max-width:100%}
 
 /* ── 인증수상 고유 스타일 ── */
 .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
-.t-card{padding:28px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
+.t-card{padding:40px 28px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
 .t-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.4s}
 .t-card:hover{border-color:#2a2a2a;transform:translateY(-3px)}
 .t-card:hover::before{opacity:1}
-.t-year{font-size:11px;color:var(--accent);letter-spacing:2px;margin-bottom:10px;font-weight:700}
-.t-title{font-size:15px;font-weight:500;color:#ccc;line-height:1.55}
+.t-year{font-size:13px;color:var(--accent);letter-spacing:2px;margin-bottom:12px;font-weight:700}
+.t-title{font-size:17px;font-weight:500;color:#ccc;line-height:1.6}
 @media(max-width:1024px){.trust-row{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.trust-row{grid-template-columns:1fr}}
 </style>
