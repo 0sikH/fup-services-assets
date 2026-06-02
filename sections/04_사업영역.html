@@ -1,0 +1,130 @@
+<!--
+  ============================================
+  [섹션 04] 사업 영역 (스크롤 연동 가로 이동)
+  ============================================
+-->
+
+<style>
+/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+
+/* ── 사업영역 고유 스타일 ── */
+.biz-outer{position:relative}
+.biz-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.biz-sticky-header{max-width:var(--max);margin:0 auto;padding:0 40px 32px;text-align:left}
+.biz-scroll-track{display:flex;gap:24px;padding:0 calc(50vw - 19vw);will-change:transform}
+.biz-slide{width:38vw;max-width:450px;height:calc((100vh - 320px) * 0.7);min-height:220px;position:relative;overflow:hidden;border-radius:18px;flex-shrink:0;cursor:pointer}
+.biz-slide-bg{position:absolute;inset:0}
+.biz-slide-bg img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.biz-slide:hover .biz-slide-bg img{transform:scale(1.04)}
+.biz-slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0.25) 100%)}
+.biz-slide-content{position:absolute;bottom:0;left:0;right:0;padding:48px 44px;z-index:1}
+.biz-slide-num{font-size:clamp(60px,8vw,100px);font-weight:900;background:linear-gradient(135deg,rgba(45,212,168,0.25),rgba(45,212,168,0.08));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:-8px;letter-spacing:-3px}
+.biz-slide-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
+.biz-slide-title{font-size:clamp(24px,3vw,36px);font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:-0.5px}
+.biz-slide-desc{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.7);max-width:480px}
+.biz-slide-cta{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:10px 24px;border:1px solid rgba(255,255,255,0.2);border-radius:24px;font-size:12px;color:#ccc;transition:all 0.3s}
+.biz-slide-cta:hover{border-color:var(--accent);color:var(--accent)}
+.biz-progress{display:flex;gap:8px;justify-content:center;margin-top:20px}
+.biz-dot{width:32px;height:3px;background:var(--border);border-radius:2px;transition:all 0.4s;cursor:pointer}
+.biz-dot.active{background:var(--accent);width:48px}
+@media(max-width:1024px){.biz-slide{width:60vw;max-width:500px}}
+@media(max-width:640px){.biz-slide{width:80vw;height:calc(100vh - 300px)}.biz-slide-content{padding:32px 28px}.biz-slide-title{font-size:22px!important}}
+</style>
+
+<div class="biz-outer" id="bizOuter">
+  <div class="biz-sticky">
+    <div class="biz-sticky-header">
+      <span class="sec-label">Business</span>
+      <h2 class="sec-heading">사업 영역</h2>
+      <p class="sec-desc">브랜드의 탄생부터 글로벌 유통까지, 원스톱 솔루션을 제공합니다.</p>
+    </div>
+    <div class="biz-scroll-track" id="bizTrack">
+      <div class="biz-slide">
+        <div class="biz-slide-bg"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/biz-manufacturing.jpg" alt="" /></div>
+        <div class="biz-slide-content">
+          <span class="biz-slide-num">01</span>
+          <span class="biz-slide-label">Manufacturing</span>
+          <h3 class="biz-slide-title">화장품 제조</h3>
+          <p class="biz-slide-desc">엑소좀 기반 기능성 화장품부터 OEM/ODM까지. AI 피부 진단 기술과 결합한 맞춤형 뷰티 제품을 연구·제조합니다.</p>
+          <span class="biz-slide-cta">자세히 보기 →</span>
+        </div>
+      </div>
+      <div class="biz-slide">
+        <div class="biz-slide-bg"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/thumb-logistics.jpeg" alt="" /></div>
+        <div class="biz-slide-content">
+          <span class="biz-slide-num">02</span>
+          <span class="biz-slide-label">Distribution</span>
+          <h3 class="biz-slide-title">브랜드 유통</h3>
+          <p class="biz-slide-desc">루아셀, 럭스플로라 등 자체 브랜드와 200여 글로벌 파트너 브랜드의 국내외 유통망을 운영합니다.</p>
+          <span class="biz-slide-cta">자세히 보기 →</span>
+        </div>
+      </div>
+      <div class="biz-slide">
+        <div class="biz-slide-bg"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/biz-studio.jpg" alt="" /></div>
+        <div class="biz-slide-content">
+          <span class="biz-slide-num">03</span>
+          <span class="biz-slide-label">Contents & Studio</span>
+          <h3 class="biz-slide-title">콘텐츠 제작</h3>
+          <p class="biz-slide-desc">삼성, 아모레퍼시픽, 로레알 등 글로벌 브랜드와 협업. 광고·브랜딩·영상을 원스톱으로 제작합니다.</p>
+          <span class="biz-slide-cta">자세히 보기 →</span>
+        </div>
+      </div>
+      <div class="biz-slide">
+        <div class="biz-slide-bg"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/biz-consulting.jpg" alt="" /></div>
+        <div class="biz-slide-content">
+          <span class="biz-slide-num">04</span>
+          <span class="biz-slide-label">Export & Consulting</span>
+          <h3 class="biz-slide-title">수출 · 컨설팅</h3>
+          <p class="biz-slide-desc">태국, 중동, 북미 등 글로벌 시장 진출 전략 수립부터 현지 유통 파트너십 구축까지 리드합니다.</p>
+          <span class="biz-slide-cta">자세히 보기 →</span>
+        </div>
+      </div>
+    </div>
+    <div class="biz-progress" id="bizDots">
+      <div class="biz-dot active" data-i="0"></div>
+      <div class="biz-dot" data-i="1"></div>
+      <div class="biz-dot" data-i="2"></div>
+      <div class="biz-dot" data-i="3"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var outer=document.getElementById('bizOuter');
+  var track=document.getElementById('bizTrack');
+  var dots=document.querySelectorAll('.biz-dot');
+  if(!outer||!track)return;
+
+  var slides=track.querySelectorAll('.biz-slide');
+  var lastSlide=slides[slides.length-1];
+  var slideW=lastSlide.offsetWidth;
+  var totalScroll=track.scrollWidth-slideW-(window.innerWidth-slideW)/2;
+  outer.style.height=(totalScroll+window.innerHeight)+'px';
+
+  function onScroll(){
+    var rect=outer.getBoundingClientRect();
+    var progress=Math.max(0,Math.min(1,-rect.top/(outer.offsetHeight-window.innerHeight)));
+    track.style.transform='translateX('+ (-progress*totalScroll) +'px)';
+    var idx=Math.min(3,Math.floor(progress*4));
+    dots.forEach(function(d,i){d.classList.toggle('active',i===idx)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+<div class="divider"></div>

@@ -1,0 +1,48 @@
+<!--
+  ============================================
+  [섹션 07] 인증 · 수상
+  ============================================
+-->
+
+<style>
+/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+
+/* ── 인증수상 고유 스타일 ── */
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+.t-card{padding:28px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
+.t-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.4s}
+.t-card:hover{border-color:#2a2a2a;transform:translateY(-3px)}
+.t-card:hover::before{opacity:1}
+.t-year{font-size:11px;color:var(--accent);letter-spacing:2px;margin-bottom:10px;font-weight:700}
+.t-title{font-size:15px;font-weight:500;color:#ccc;line-height:1.55}
+@media(max-width:1024px){.trust-row{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.trust-row{grid-template-columns:1fr}}
+</style>
+
+<section class="sec">
+  <span class="sec-label reveal">Trust & Awards</span>
+  <h2 class="sec-heading reveal">인증 · 수상</h2>
+  <div class="trust-row">
+    <div class="t-card reveal"><p class="t-year">2026</p><p class="t-title">포브스코리아<br/>소비자 선정 최고의 브랜드 대상</p></div>
+    <div class="t-card reveal"><p class="t-year">2026</p><p class="t-title">SCI 기술평가<br/>T5- 등급 획득</p></div>
+    <div class="t-card reveal"><p class="t-year">2025</p><p class="t-title">국민일보 국민브랜드대상<br/>CEO 부문</p></div>
+    <div class="t-card reveal"><p class="t-year">2025</p><p class="t-title">ISO 9001·14001·45001<br/>국제표준 3종 인증</p></div>
+    <div class="t-card reveal"><p class="t-year">2025</p><p class="t-title">중소벤처기업부<br/>혁신성장유형 벤처기업</p></div>
+    <div class="t-card reveal"><p class="t-year">2025</p><p class="t-title">중소벤처기업부<br/>메인비즈 인증</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>

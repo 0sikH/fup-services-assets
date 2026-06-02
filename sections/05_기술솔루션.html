@@ -1,0 +1,97 @@
+<!--
+  ============================================
+  [섹션 05] 기술 & 솔루션 (스마트팩토리 + 에프유피넥스)
+  ============================================
+-->
+
+<style>
+/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+
+/* ── 기술솔루션 고유 스타일 ── */
+.tech-block{display:flex;align-items:stretch;margin:48px 24px 0;overflow:hidden;border-radius:18px;border:1px solid var(--border)}
+.tech-block+.tech-block{margin-top:24px}
+.tech-block.reverse{flex-direction:row-reverse}
+.tech-block-img{flex:0 0 50%;overflow:hidden;position:relative;background:#0a0a0a}
+.tech-block-img img,.tech-block-img video{width:100%;height:100%;object-fit:cover;min-height:440px;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
+.tech-block:hover .tech-block-img img,.tech-block:hover .tech-block-img video{transform:scale(1.04)}
+.tech-block-content{flex:1;padding:64px 60px;display:flex;flex-direction:column;justify-content:center;background:var(--card)}
+.tech-badge{display:inline-block;padding:7px 20px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:24px;width:fit-content}
+.tech-badge.mint{background:rgba(45,212,168,0.12);color:var(--accent);border:1px solid rgba(45,212,168,0.2)}
+.tech-badge.purple{background:rgba(168,100,255,0.12);color:#b78aff;border:1px solid rgba(168,100,255,0.2)}
+.tech-title{font-size:clamp(28px,3.5vw,36px);font-weight:800;margin-bottom:8px;color:#fff;letter-spacing:-0.5px}
+.tech-subtitle{font-size:15px;color:var(--sub);margin-bottom:20px;letter-spacing:0.5px}
+.tech-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,0.7);margin-bottom:28px}
+.tech-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tech-tag{padding:8px 18px;border-radius:20px;font-size:12.5px;font-weight:500}
+.tech-tag.mint{background:rgba(45,212,168,0.08);border:1px solid rgba(45,212,168,0.15);color:var(--accent)}
+.tech-tag.purple{background:rgba(168,100,255,0.08);border:1px solid rgba(168,100,255,0.15);color:#b78aff}
+.tech-cta{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:15px;font-weight:600;transition:all 0.3s}
+.tech-cta.mint{color:var(--accent)}
+.tech-cta.mint:hover{color:var(--accent2);transform:translateX(4px)}
+.tech-cta.purple{color:#b78aff}
+.tech-cta.purple:hover{color:#d4b3ff;transform:translateX(4px)}
+.tech-cta svg{width:16px;height:16px;transition:transform 0.3s}
+.tech-cta:hover svg{transform:translateX(4px)}
+@media(max-width:768px){.tech-block,.tech-block.reverse{flex-direction:column}.tech-block-img{flex:none}.tech-block-img img,.tech-block-img video{min-height:260px}.tech-block-content{padding:40px 28px}}
+</style>
+
+<div style="max-width:var(--max);margin:0 auto;padding:100px 40px 0">
+  <span class="sec-label reveal">Technology & Solution</span>
+  <h2 class="sec-heading reveal">기술 & 솔루션</h2>
+  <p class="sec-desc reveal">자체 개발 시스템으로 제조 현장과 경영 전반을 혁신합니다.</p>
+</div>
+
+<div class="tech-block reveal">
+  <div class="tech-block-img">
+    <video src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/video-smartfactory.mp4" autoplay muted loop playsinline></video>
+  </div>
+  <div class="tech-block-content">
+    <span class="tech-badge mint">SMART FACTORY</span>
+    <h3 class="tech-title">스마트 팩토리</h3>
+    <p class="tech-subtitle">ERP · MES 자체 개발 시스템</p>
+    <p class="tech-desc">화장품 제조 공정 전반을 디지털화. 원자재 입고부터 생산, 품질 검사, 출하까지 실시간 모니터링하고 AI 기반 공정 최적화를 실현합니다.</p>
+    <div class="tech-tags">
+      <span class="tech-tag mint">ERP</span>
+      <span class="tech-tag mint">MES</span>
+      <span class="tech-tag mint">공정 자동화</span>
+      <span class="tech-tag mint">실시간 모니터링</span>
+      <span class="tech-tag mint">AI 최적화</span>
+    </div>
+    <a class="tech-cta mint" href="#">자세히 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+
+<div class="tech-block reverse reveal">
+  <div class="tech-block-img">
+    <video src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/video-fupnex.mp4" autoplay muted loop playsinline></video>
+  </div>
+  <div class="tech-block-content">
+    <span class="tech-badge purple">FUPNEX</span>
+    <h3 class="tech-title">에프유피넥스</h3>
+    <p class="tech-subtitle">올인원 경영 솔루션 플랫폼</p>
+    <p class="tech-desc">복잡한 경영 과제를 하나의 앱에서 진단하고, 단계별 가이드와 전문가 자문으로 해결. 벤처인증, ISO, 특허, 정책자금, 법인설립까지 원스톱으로 지원합니다.</p>
+    <div class="tech-tags">
+      <span class="tech-tag purple">경영 진단</span>
+      <span class="tech-tag purple">벤처인증</span>
+      <span class="tech-tag purple">ISO 인증</span>
+      <span class="tech-tag purple">특허·상표</span>
+      <span class="tech-tag purple">정책자금</span>
+    </div>
+    <a class="tech-cta purple" href="https://www.fupglobalpartners.com/FUP_BizNavi">자세히 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+
+<div class="divider" style="margin-top:100px"></div>

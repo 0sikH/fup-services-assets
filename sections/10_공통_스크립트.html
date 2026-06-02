@@ -1,0 +1,144 @@
+<!--
+  ============================================
+  [공통] 애니메이션 스크립트
+  ============================================
+  아임웹 페이지 최하단 코드 삽입 위젯에 넣으세요.
+  이 코드는 한 번만 넣으면 됩니다.
+-->
+
+<script>
+(function(){
+  /* ── IntersectionObserver: .reveal → .visible ── */
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -10% 0px'});
+
+  document.querySelectorAll('.reveal').forEach(function(el){
+    revealObserver.observe(el);
+  });
+
+  /* ── Divider reveal ── */
+  var dividerObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        dividerObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -8% 0px'});
+
+  document.querySelectorAll('.divider').forEach(function(d){
+    dividerObserver.observe(d);
+  });
+
+  /* ── Stagger reveal for batched items ── */
+  function staggerReveal(selector){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var parent = entry.target.closest('.group-grid, .trust-row, .stats-inner, .news-grid');
+          if(parent){
+            var items = parent.querySelectorAll(selector);
+            items.forEach(function(item,i){
+              setTimeout(function(){item.classList.add('visible')},i*80);
+            });
+            observer.unobserve(entry.target);
+          } else {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -10% 0px'});
+
+    var els = document.querySelectorAll(selector);
+    if(els.length>0) observer.observe(els[0]);
+  }
+  staggerReveal('.g-item.reveal');
+  staggerReveal('.t-card.reveal');
+  staggerReveal('.sstat.reveal');
+
+  /* ── Counter animation (IntersectionObserver + vanilla JS) ── */
+  var counterObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-count'));
+        var duration = 1800;
+        var startTime = null;
+        function animate(timestamp){
+          if(!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime)/duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(eased * target);
+          if(progress < 1) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -12% 0px'});
+
+  document.querySelectorAll('.sstat-num[data-count]').forEach(function(el){
+    counterObserver.observe(el);
+  });
+
+  /* ── Business section horizontal scroll with snap + dot sync ── */
+  var track = document.getElementById('bizTrack');
+  var dots = document.querySelectorAll('.biz-dot');
+  if(track && dots.length){
+    track.addEventListener('scroll',function(){
+      var scrollLeft = track.scrollLeft;
+      var slides = track.querySelectorAll('.biz-slide');
+      var idx = 0;
+      slides.forEach(function(slide,i){
+        if(scrollLeft >= slide.offsetLeft - track.offsetWidth/3) idx = i;
+      });
+      dots.forEach(function(d,i){d.classList.toggle('active',i===idx)});
+    });
+    dots.forEach(function(dot){
+      dot.addEventListener('click',function(){
+        var i = parseInt(dot.getAttribute('data-i'));
+        var slides = track.querySelectorAll('.biz-slide');
+        if(slides[i]){
+          track.scrollTo({left:slides[i].offsetLeft - parseInt(getComputedStyle(track).paddingLeft),behavior:'smooth'});
+        }
+      });
+    });
+  }
+
+  /* ── News fetch ── */
+  var NB='https://raw.githubusercontent.com/0sikH/fup-services-assets/main/news/';
+  fetch(NB+'news-data.json?t='+Date.now()).then(function(r){return r.json()}).then(function(data){
+    data.sort(function(a,b){return b.date.replace(/\./g,'')-a.date.replace(/\./g,'')});
+    var grid=document.getElementById('homeNewsGrid');grid.innerHTML='';
+    for(var i=0;i<Math.min(data.length,6);i++){
+      var n=data[i],c=document.createElement('a');
+      c.className='n-card reveal';c.href=n.link||'#';
+      if(n.link){c.target='_blank';c.rel='noopener'}
+      c.innerHTML='<div class="n-card-img" style="position:relative"><img src="'+NB+n.image+'" alt="" loading="lazy" onerror="this.classList.add(\'n-err\')"/><div class="n-fallback">FUP</div></div><div class="n-card-body"><p class="n-card-date">'+n.date+'</p><p class="n-card-title">'+n.title+'</p></div>';
+      grid.appendChild(c);
+    }
+    /* observe dynamically created news cards */
+    var newsObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var cards = grid.querySelectorAll('.n-card.reveal');
+          cards.forEach(function(card,i){
+            setTimeout(function(){card.classList.add('visible')},i*80);
+          });
+          newsObserver.disconnect();
+        }
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -10% 0px'});
+
+    var firstCard = grid.querySelector('.n-card');
+    if(firstCard) newsObserver.observe(firstCard);
+  });
+})();
+</script>

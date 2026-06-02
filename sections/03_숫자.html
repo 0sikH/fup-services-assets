@@ -1,0 +1,41 @@
+<!--
+  ============================================
+  [섹션 03] 숫자로 보는 FUP
+  ============================================
+-->
+
+<style>
+/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+
+/* ── STATS 고유 스타일 ── */
+.stats-band{padding:56px 40px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(45,212,168,0.015)}
+.stats-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.sstat{text-align:center;padding:12px;position:relative}
+.sstat:not(:last-child)::after{content:'';position:absolute;right:0;top:15%;height:70%;width:1px;background:var(--border)}
+.sstat-num{font-size:clamp(32px,4vw,48px);font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.sstat-label{font-size:14px;color:var(--sub);margin-top:8px}
+@media(max-width:1024px){.stats-inner{grid-template-columns:repeat(2,1fr)}.sstat:nth-child(2)::after{display:none}}
+@media(max-width:640px){.stats-inner{grid-template-columns:1fr 1fr}.stats-band{padding:40px 20px}}
+</style>
+
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="sstat reveal"><div class="sstat-num" data-count="50">0</div><div class="sstat-label">연 매출 (억 원+)</div></div>
+    <div class="sstat reveal"><div class="sstat-num" data-count="7">0</div><div class="sstat-label">관계사</div></div>
+    <div class="sstat reveal"><div class="sstat-num" data-count="200">0</div><div class="sstat-label">파트너 브랜드+</div></div>
+    <div class="sstat reveal"><div class="sstat-num" data-count="3">0</div><div class="sstat-label">ISO 국제 인증</div></div>
+  </div>
+</div>
