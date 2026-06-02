@@ -1,0 +1,25 @@
+<!--
+  ============================================
+  [공통] 스타일 + 외부 라이브러리
+  ============================================
+  아임웹 페이지 최상단 코드 삽입 위젯에 넣으세요.
+  이 코드는 한 번만 넣으면 됩니다.
+-->
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+</style>

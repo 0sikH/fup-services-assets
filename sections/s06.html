@@ -1,0 +1,46 @@
+<!--
+  ============================================
+  [섹션 06] 관계사
+  ============================================
+-->
+
+<style>
+/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+:root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec{padding:100px 40px;max-width:var(--max);margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(26px,3.5vw,40px);font-weight:700;line-height:1.3;letter-spacing:-0.5px;margin-bottom:16px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:560px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto;transform:scaleX(0);transition:transform 0.8s cubic-bezier(0.4,0,0.2,1)}.divider.visible{transform:scaleX(1)}
+@media(max-width:1024px){.sec{padding:80px 24px}}
+@media(max-width:640px){.sec{padding:60px 20px}}
+
+/* ── 관계사 고유 스타일 ── */
+.group-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:64px;max-width:1100px;margin-left:auto;margin-right:auto}
+.g-item{width:33.33%;height:120px;display:flex;align-items:center;justify-content:center;padding:24px;transition:all 0.4s}
+.g-item img{max-height:40px;max-width:200px;filter:brightness(0) invert(1);opacity:0.5;transition:opacity 0.4s}
+.g-item:hover img{opacity:1}
+@media(max-width:640px){.group-grid{grid-template-columns:repeat(3,1fr)!important}.g-item{height:65px}}
+</style>
+
+<section class="sec" style="text-align:center">
+  <span class="sec-label reveal">Group</span>
+  <h2 class="sec-heading reveal">FUP 관계사</h2>
+  <p class="sec-desc reveal" style="margin:0 auto">뷰티, 콘텐츠, 유통, 컨설팅을 아우르는 그룹 네트워크</p>
+  <div class="group-grid">
+    <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-wgi-w.png" alt="WhyNot Global Initiative" style="filter:none!important" /></div>
+    <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-fup-w.png" alt="FUP Global Partners" style="filter:none!important" /></div>
+    <div class="g-item reveal"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-luacell.png" alt="Luacell" /></div>
+    <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-luxeflora.png" alt="Luxe Flora" /></div>
+    <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-bbintl.png" alt="BB International" /></div>
+    <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-jcmedia.png" alt="JC Media" /></div>
+    <div class="g-item reveal" style="width:25%"><img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/logo-brit.png" alt="BRIT" /></div>
+  </div>
+</section>
+
+<div class="divider"></div>
