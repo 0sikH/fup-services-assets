@@ -1,11 +1,11 @@
 <!--
   ============================================
-  [섹션 05b] 브랜드 영상
+  [섹션 05b] 브랜드 영상 (스크롤 도착 시 재생)
   ============================================
 -->
 
 <style>
-/* ── 공통 CSS (아임웹 위젯 간 CSS 비공유 대응) ── */
+/* ── 공통 CSS ── */
 :root{--bg:#050505;--card:#0c0c0c;--border:#181818;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -25,86 +25,37 @@ img{display:block;max-width:100%}
 }
 .vid-wrapper video{
   width:100%;height:100%;object-fit:cover;
-  display:none;
-}
-.vid-wrapper video.playing{display:block}
-.vid-overlay{
-  position:absolute;inset:0;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  background:linear-gradient(180deg,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%);
-  cursor:pointer;transition:opacity 0.5s;
-  z-index:2;
-}
-.vid-overlay.hidden{opacity:0;pointer-events:none}
-.vid-overlay h2{
-  font-size:clamp(24px,3.5vw,42px);font-weight:700;
-  letter-spacing:-0.5px;margin-bottom:32px;text-align:center;
-}
-.vid-play{
-  width:80px;height:80px;border-radius:50%;
-  border:2px solid rgba(255,255,255,0.3);
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-  display:flex;align-items:center;justify-content:center;
-  transition:all 0.4s;cursor:pointer;
-}
-.vid-play:hover{
-  background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.5);
-  transform:scale(1.08);
-  box-shadow:0 0 40px rgba(255,255,255,0.1);
-}
-.vid-play svg{width:28px;height:28px;margin-left:4px;color:#fff}
-.vid-bg-thumb{
-  position:absolute;inset:0;z-index:0;
-}
-.vid-bg-thumb video{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:brightness(0.4);
 }
 @media(max-width:768px){
   .vid-section{padding:60px 24px}
-  .vid-play{width:60px;height:60px}
-  .vid-play svg{width:22px;height:22px}
 }
 </style>
 
 <section class="vid-section">
   <div class="vid-wrapper reveal" id="vidWrap">
-    <div class="vid-bg-thumb">
-      <video src="https://res.cloudinary.com/dqutiswqw/video/upload/FUP_%E1%84%92%E1%85%A9%E1%86%BC%E1%84%87%E1%85%A9_%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_2K_qijahn.mp4" muted loop playsinline autoplay></video>
-    </div>
-    <video id="fupMainVideo" controls playsinline controlsList="nodownload noplaybackrate" disablePictureInPicture>
+    <video id="fupMainVideo" playsinline controlsList="nodownload noplaybackrate" disablePictureInPicture>
       <source src="https://res.cloudinary.com/dqutiswqw/video/upload/FUP_%E1%84%92%E1%85%A9%E1%86%BC%E1%84%87%E1%85%A9_%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC_2K_qijahn.mp4" type="video/mp4" />
     </video>
-    <div class="vid-overlay" id="vidOverlay">
-      <h2>What defines a Brand?</h2>
-      <button class="vid-play" id="vidPlayBtn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-    </div>
   </div>
 </section>
 
 <script>
 (function(){
-  var overlay=document.getElementById('vidOverlay');
   var video=document.getElementById('fupMainVideo');
-  var playBtn=document.getElementById('vidPlayBtn');
-  if(!overlay||!video||!playBtn)return;
+  if(!video)return;
 
-  function play(){
-    overlay.classList.add('hidden');
-    video.style.display='block';
-    video.play();
-  }
-  overlay.addEventListener('click',play);
-  video.addEventListener('ended',function(){
-    overlay.classList.remove('hidden');
-    video.style.display='none';
-  });
-  video.addEventListener('pause',function(){
-    if(video.ended)return;
-  });
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        video.play();
+        video.controls=true;
+      }else{
+        video.pause();
+      }
+    });
+  },{threshold:0.4});
+
+  observer.observe(video);
 })();
 </script>
 
