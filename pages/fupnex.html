@@ -1,0 +1,752 @@
+<!--
+  ============================================
+  [에프유피넥스 랜딩페이지]
+  올인원 경영 솔루션 플랫폼 (FUP BizNavi)
+  ============================================
+-->
+
+<style>
+:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#a864ff;--accent2:#c69bff;--accent-dark:#7d3edb;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--max:1200px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:18px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:640px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto}
+</style>
+
+<!-- [FN-01] 히어로 -->
+<style>
+.fn-hero{position:relative;width:100%;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.fn-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.fn-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.4) 40%,rgba(5,5,5,0.88) 100%);z-index:1}
+.fn-hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:960px}
+.fn-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:24px;background:rgba(168,100,255,0.12);border:1px solid rgba(168,100,255,0.3);font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:600;margin-bottom:28px;text-transform:uppercase}
+.fn-hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:fnPulse 2s infinite}
+@keyframes fnPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.fn-hero-title{font-size:clamp(34px,5.5vw,68px);font-weight:800;line-height:1.15;letter-spacing:-1.5px;margin-bottom:24px}
+.fn-hero-title em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fn-hero-desc{font-size:clamp(15px,1.5vw,18px);line-height:1.7;color:rgba(255,255,255,0.75);max-width:680px;margin:0 auto 40px}
+.fn-hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.fn-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:32px;font-size:14px;font-weight:600;letter-spacing:0.5px;transition:all 0.3s;cursor:pointer;border:none}
+.fn-btn-primary{background:var(--accent);color:#fff}
+.fn-btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(168,100,255,0.4)}
+.fn-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.25)}
+.fn-btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.fn-btn svg{width:16px;height:16px}
+@media(max-width:640px){.fn-hero{height:90vh;min-height:540px}}
+</style>
+<section class="fn-hero">
+  <video class="fn-hero-video" src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/video-fupnex.mp4" autoplay muted loop playsinline></video>
+  <div class="fn-hero-overlay"></div>
+  <div class="fn-hero-inner">
+    <span class="fn-hero-badge">FUPNEX · 에프유피넥스</span>
+    <h1 class="fn-hero-title">복잡한 경영 과제,<br/><em>하나의 앱</em>으로</h1>
+    <p class="fn-hero-desc">벤처인증·ISO·특허·정책자금·법인설립까지. 진단부터 자문, 신청서 제출까지 한 흐름으로 완료하는 올인원 경영 솔루션입니다.</p>
+    <div class="fn-hero-cta">
+      <a class="fn-btn fn-btn-primary" href="https://www.fupglobalpartners.com/FUP_BizNavi">앱 둘러보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="fn-btn fn-btn-ghost" href="#fn-features">기능 살펴보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- [FN-02] 문제 정의 -->
+<style>
+.fn-pain{padding:120px 40px;background:var(--bg)}
+.fn-pain-inner{max-width:var(--max);margin:0 auto}
+.fn-pain-head{text-align:center;margin-bottom:64px}
+.fn-pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fn-pain-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 32px;transition:all 0.4s}
+.fn-pain-card:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-4px)}
+.fn-pain-num{font-size:13px;letter-spacing:3px;color:rgba(255,255,255,0.3);font-weight:600;margin-bottom:18px;display:block}
+.fn-pain-icon{width:48px;height:48px;border-radius:12px;background:rgba(168,100,255,0.08);border:1px solid rgba(168,100,255,0.18);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.fn-pain-icon svg{width:24px;height:24px;color:var(--accent)}
+.fn-pain-title{font-size:20px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
+.fn-pain-desc{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.6)}
+@media(max-width:900px){.fn-pain-grid{grid-template-columns:1fr;gap:16px}.fn-pain{padding:90px 24px}}
+</style>
+<section class="fn-pain">
+  <div class="fn-pain-inner">
+    <div class="fn-pain-head reveal">
+      <span class="sec-label">The Problem</span>
+      <h2 class="sec-heading">경영 의사결정은<br/>왜 늘 외주 컨설팅에 묶일까요?</h2>
+    </div>
+    <div class="fn-pain-grid">
+      <div class="fn-pain-card reveal">
+        <span class="fn-pain-num">PROBLEM 01</span>
+        <div class="fn-pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3 class="fn-pain-title">정보가 흩어져 있습니다</h3>
+        <p class="fn-pain-desc">벤처·이노비즈·정책자금·세제 혜택 정보가 기관별 사이트에 흩어져 있어, 어느 것이 우리 회사에 맞는지 판단하기 어렵습니다.</p>
+      </div>
+      <div class="fn-pain-card reveal">
+        <span class="fn-pain-num">PROBLEM 02</span>
+        <div class="fn-pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+        <h3 class="fn-pain-title">컨설팅 비용이 부담입니다</h3>
+        <p class="fn-pain-desc">인증·정책자금 컨설팅 한 건당 수백만 원. 그것도 결과를 보장받지 못한 채 선결제하는 구조가 많습니다.</p>
+      </div>
+      <div class="fn-pain-card reveal">
+        <span class="fn-pain-num">PROBLEM 03</span>
+        <div class="fn-pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3 class="fn-pain-title">서류 준비가 미궁입니다</h3>
+        <p class="fn-pain-desc">신청서·증빙·계획서를 처음부터 작성. 같은 정보를 양식마다 다시 입력하느라 본업이 멈춥니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-03] 솔루션 3단 흐름 -->
+<style>
+.fn-flow{padding:120px 40px;background:linear-gradient(180deg,var(--bg) 0%,#080808 50%,var(--bg) 100%)}
+.fn-flow-inner{max-width:var(--max);margin:0 auto}
+.fn-flow-head{text-align:center;margin-bottom:72px}
+.fn-flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.fn-flow-step{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:40px 32px;text-align:center;transition:all 0.4s;position:relative}
+.fn-flow-step:hover{border-color:var(--accent);transform:translateY(-4px)}
+.fn-flow-num{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:800;font-size:20px;margin-bottom:22px;box-shadow:0 6px 16px rgba(168,100,255,0.3)}
+.fn-flow-step-title{font-size:20px;font-weight:700;color:#fff;margin-bottom:12px}
+.fn-flow-step-desc{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.6)}
+@media(max-width:900px){.fn-flow-steps{grid-template-columns:1fr;gap:16px}.fn-flow{padding:90px 24px}}
+</style>
+<section class="fn-flow">
+  <div class="fn-flow-inner">
+    <div class="fn-flow-head reveal">
+      <span class="sec-label">How It Works</span>
+      <h2 class="sec-heading">진단 → 가이드 → 자문<br/>단 3단계로 끝납니다</h2>
+    </div>
+    <div class="fn-flow-steps">
+      <div class="fn-flow-step reveal">
+        <div class="fn-flow-num">1</div>
+        <h3 class="fn-flow-step-title">AI 진단</h3>
+        <p class="fn-flow-step-desc">기업 정보를 입력하면 적용 가능한 인증·정책자금·세제 혜택을 AI가 자동 매칭합니다.</p>
+      </div>
+      <div class="fn-flow-step reveal">
+        <div class="fn-flow-num">2</div>
+        <h3 class="fn-flow-step-title">단계별 가이드</h3>
+        <p class="fn-flow-step-desc">선택한 과제를 신청서·증빙·일정까지 단계별로 안내. 클릭만으로 서류가 자동 채워집니다.</p>
+      </div>
+      <div class="fn-flow-step reveal">
+        <div class="fn-flow-num">3</div>
+        <h3 class="fn-flow-step-title">전문가 자문</h3>
+        <p class="fn-flow-step-desc">변리사·노무사·세무사 전문가 풀이 검토와 자문을 제공. 통과율을 끌어올립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04] 핵심 모듈 5개 -->
+<style>
+.fn-modules{padding:120px 40px;background:var(--bg)}
+.fn-modules-inner{max-width:var(--max);margin:0 auto}
+.fn-modules-head{text-align:center;margin-bottom:64px}
+.fn-modules-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.fn-mod{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 22px;text-align:left;transition:all 0.4s;cursor:pointer;position:relative;overflow:hidden}
+.fn-mod::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:scaleX(0);transition:transform 0.4s}
+.fn-mod:hover::before{transform:scaleX(1)}
+.fn-mod:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-4px)}
+.fn-mod-icon{width:44px;height:44px;border-radius:11px;background:rgba(168,100,255,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;border:1px solid rgba(168,100,255,0.18)}
+.fn-mod-icon svg{width:22px;height:22px;color:var(--accent)}
+.fn-mod-title{font-size:15.5px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-0.2px}
+.fn-mod-desc{font-size:12.5px;line-height:1.6;color:var(--sub)}
+@media(max-width:1024px){.fn-modules-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.fn-modules-grid{grid-template-columns:1fr}.fn-modules{padding:90px 24px}}
+</style>
+<section class="fn-modules" id="fn-features">
+  <div class="fn-modules-inner">
+    <div class="fn-modules-head reveal">
+      <span class="sec-label">Core Modules</span>
+      <h2 class="sec-heading">하나의 앱, 5가지 모듈</h2>
+    </div>
+    <div class="fn-modules-grid">
+      <div class="fn-mod reveal">
+        <div class="fn-mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3 class="fn-mod-title">벤처·인증</h3>
+        <p class="fn-mod-desc">벤처기업확인, 이노비즈, 메인비즈, 기업부설연구소 등 인증 자동화.</p>
+      </div>
+      <div class="fn-mod reveal">
+        <div class="fn-mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3 class="fn-mod-title">ISO 인증</h3>
+        <p class="fn-mod-desc">ISO 9001·14001·45001·27001 도입과 갱신을 한 곳에서 관리.</p>
+      </div>
+      <div class="fn-mod reveal">
+        <div class="fn-mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13L17 22l-5-3-5 3 1.5-9"/></svg></div>
+        <h3 class="fn-mod-title">특허·상표</h3>
+        <p class="fn-mod-desc">변리사 네트워크 연계. 특허·상표·디자인 출원부터 등록까지.</p>
+      </div>
+      <div class="fn-mod reveal">
+        <div class="fn-mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3 class="fn-mod-title">정책자금</h3>
+        <p class="fn-mod-desc">중기부·기보·신보·지자체 자금을 매칭하고 신청서를 자동 생성.</p>
+      </div>
+      <div class="fn-mod reveal">
+        <div class="fn-mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="fn-mod-title">법인 설립</h3>
+        <p class="fn-mod-desc">법인 설립부터 정관·등기·세무신고까지 원스톱 처리.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04a] 앱 전체 미리보기 -->
+<style>
+.fn-preview{padding:130px 40px;background:linear-gradient(180deg,var(--bg) 0%,#080612 50%,var(--bg) 100%);position:relative;overflow:hidden}
+.fn-preview::before{content:'';position:absolute;top:30%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(168,100,255,0.1) 0%,transparent 60%);transform:translate(-50%,-50%);filter:blur(40px);z-index:0}
+.fn-preview-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.fn-preview-head{text-align:center;margin-bottom:64px}
+.fn-preview-frame{position:relative;max-width:880px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid rgba(168,100,255,0.2);background:#0a0a0a;box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 60px rgba(168,100,255,0.08)}
+.fn-preview-bar{display:flex;align-items:center;gap:6px;padding:14px 18px;background:#111;border-bottom:1px solid var(--border)}
+.fn-preview-bar span{width:11px;height:11px;border-radius:50%;background:#333}
+.fn-preview-bar span:nth-child(1){background:#ff5f56}
+.fn-preview-bar span:nth-child(2){background:#ffbd2e}
+.fn-preview-bar span:nth-child(3){background:#27c93f}
+.fn-preview-bar-url{margin-left:18px;font-size:11.5px;color:var(--sub);font-family:Menlo,monospace}
+.fn-preview-img-wrap{max-height:560px;overflow:hidden;position:relative;background:#000}
+.fn-preview-img-wrap img{width:100%;display:block}
+.fn-preview-img-wrap::after{content:'';position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,transparent,#0a0a0a 90%);pointer-events:none}
+.fn-preview-cta{text-align:center;margin-top:40px}
+.fn-preview-features{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fn-preview-feat{padding:24px 26px;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:14px}
+.fn-preview-feat-num{font-size:12px;letter-spacing:2.5px;color:var(--accent);font-weight:700;margin-bottom:10px;display:block}
+.fn-preview-feat-text{font-size:14.5px;color:rgba(255,255,255,0.8);line-height:1.6}
+.fn-preview-feat-text strong{color:#fff}
+@media(max-width:900px){.fn-preview-features{grid-template-columns:1fr;gap:14px}.fn-preview{padding:90px 24px}}
+</style>
+<section class="fn-preview">
+  <div class="fn-preview-inner">
+    <div class="fn-preview-head reveal">
+      <span class="sec-label">Product Preview</span>
+      <h2 class="sec-heading">이렇게 만들어지고 있습니다</h2>
+      <p class="sec-desc" style="margin:18px auto 0">컨셉이 아닌 실제 동작. CHAPTER별로 구조화된 본문, 공식 데이터 기반 통계, 이노비즈 평가체계 기반 진단 엔진까지 — 지속 기록·공유 중인 살아있는 페이지입니다.</p>
+    </div>
+    <div class="fn-preview-frame reveal">
+      <div class="fn-preview-bar">
+        <span></span><span></span><span></span>
+        <span class="fn-preview-bar-url">fupglobalpartners.com/FUP_BizNavi</span>
+      </div>
+      <div class="fn-preview-img-wrap">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/preview-page.png" alt="에프유피넥스 앱 전체 페이지 미리보기" loading="lazy"/>
+      </div>
+    </div>
+    <div class="fn-preview-features">
+      <div class="fn-preview-feat reveal">
+        <span class="fn-preview-feat-num">CHAPTER 01-02</span>
+        <p class="fn-preview-feat-text"><strong>왜 만들었나·무엇을 담았나</strong>를 명확히 정의. 정보의 접근성 문제부터 10개 분야 선정 기준까지 투명 공개.</p>
+      </div>
+      <div class="fn-preview-feat reveal">
+        <span class="fn-preview-feat-num">CHAPTER 03-04</span>
+        <p class="fn-preview-feat-text"><strong>공식 데이터 8곳·320+ 문서</strong>를 60+ PRO 콘텐츠로 구조화. 150+ 체크리스트로 직접 진단까지 가능.</p>
+      </div>
+      <div class="fn-preview-feat reveal">
+        <span class="fn-preview-feat-num">CHAPTER 05-06</span>
+        <p class="fn-preview-feat-text"><strong>이노비즈 평가체계 기반</strong> 진단 엔진과 PostgreSQL 백엔드. 21개 화면 프론트엔드, 레이더 차트 시각화 완료.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04ax] Advisory Services - 명함 21항목 -->
+<style>
+.fn-adv{padding:130px 40px;background:var(--bg)}
+.fn-adv-inner{max-width:var(--max);margin:0 auto}
+.fn-adv-head{text-align:center;margin-bottom:64px}
+.fn-adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fn-adv-col{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:18px;padding:40px 32px;transition:all 0.4s;position:relative;overflow:hidden}
+.fn-adv-col::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.4s}
+.fn-adv-col:hover::before{opacity:1}
+.fn-adv-col:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-6px)}
+.fn-adv-cat{font-size:11px;letter-spacing:3px;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:8px;display:block}
+.fn-adv-col-title{font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.fn-adv-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.fn-adv-list li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:rgba(255,255,255,0.78);line-height:1.5;padding:2px 0}
+.fn-adv-list li::before{content:'';flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:8px;opacity:0.7}
+.fn-adv-footer{margin-top:48px;text-align:center;padding:28px 32px;background:linear-gradient(135deg,rgba(168,100,255,0.06),transparent);border:1px solid rgba(168,100,255,0.18);border-radius:14px}
+.fn-adv-footer p{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.7}
+.fn-adv-footer strong{color:var(--accent);font-weight:700}
+@media(max-width:900px){.fn-adv-grid{grid-template-columns:1fr;gap:14px}.fn-adv{padding:90px 24px}}
+</style>
+<section class="fn-adv">
+  <div class="fn-adv-inner">
+    <div class="fn-adv-head reveal">
+      <span class="sec-label">Advisory Services</span>
+      <h2 class="sec-heading">3개 영역 · 21개 자문 서비스</h2>
+      <p class="sec-desc" style="margin:18px auto 0">에프유피글로벌파트너스가 실제 수행해온 자문 영역. 앱에서 진단 후, 필요한 항목을 골라 전문가 자문으로 바로 이어집니다.</p>
+    </div>
+    <div class="fn-adv-grid">
+      <div class="fn-adv-col reveal">
+        <span class="fn-adv-cat">Funding & Grants</span>
+        <h3 class="fn-adv-col-title">자금조달 · 정책지원</h3>
+        <ul class="fn-adv-list">
+          <li>경영(관리) 자문</li>
+          <li>투자제안서 (국내·해외)</li>
+          <li>자금조달 (투자유치)</li>
+          <li>수출도약패키지 (마케팅)</li>
+          <li>R&amp;D 무상지원 자문</li>
+          <li>상속·증여·세무·노무·고용</li>
+          <li>부동산컨설팅 자문</li>
+        </ul>
+      </div>
+      <div class="fn-adv-col reveal">
+        <span class="fn-adv-cat">Certifications & Compliance</span>
+        <h3 class="fn-adv-col-title">인증 · 컴플라이언스</h3>
+        <ul class="fn-adv-list">
+          <li>ISO 9001 / 14001</li>
+          <li>기업부설연구소</li>
+          <li>벤처기업 확인</li>
+          <li>부품소재 전문기업</li>
+          <li>뿌리기술 전문기업</li>
+          <li>이노비즈 · 메인비즈</li>
+          <li>지적재산권 (특허·상표·디자인)</li>
+        </ul>
+      </div>
+      <div class="fn-adv-col reveal">
+        <span class="fn-adv-cat">Finance & Valuation</span>
+        <h3 class="fn-adv-col-title">재무 · 가치평가</h3>
+        <ul class="fn-adv-list">
+          <li>법인전환 · 설립</li>
+          <li>가지급금 정리</li>
+          <li>특허 자본화</li>
+          <li>영업권 평가</li>
+          <li>주식가치 평가</li>
+          <li>제도 정비</li>
+          <li>신용등급 관리</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fn-adv-footer reveal">
+      <p>모든 자문 항목은 <strong>앱 내 자가 진단 → 매칭 → 전문가 풀 연결</strong>의 한 흐름으로 제공됩니다. 무료 진단부터 시작해보세요.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04b] STRENGTHS - 왜 에프유피넥스인가 -->
+<style>
+.fn-str{padding:130px 40px;background:linear-gradient(180deg,var(--bg) 0%,#0a0612 50%,var(--bg) 100%)}
+.fn-str-inner{max-width:var(--max);margin:0 auto}
+.fn-str-head{text-align:center;margin-bottom:64px}
+.fn-str-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.fn-str-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:40px 36px;transition:all 0.4s;position:relative;overflow:hidden}
+.fn-str-card::before{content:'';position:absolute;top:0;left:0;width:0;height:100%;background:linear-gradient(180deg,rgba(168,100,255,0.06),transparent);transition:width 0.5s}
+.fn-str-card:hover::before{width:100%}
+.fn-str-card:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-4px)}
+.fn-str-num{font-size:13px;letter-spacing:3px;color:var(--accent);font-weight:700;margin-bottom:18px;display:block;position:relative;z-index:1}
+.fn-str-icon{width:54px;height:54px;border-radius:14px;background:rgba(168,100,255,0.1);border:1px solid rgba(168,100,255,0.18);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;z-index:1}
+.fn-str-icon svg{width:26px;height:26px;color:var(--accent)}
+.fn-str-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;position:relative;z-index:1}
+.fn-str-desc{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.65);position:relative;z-index:1}
+.fn-str-desc strong{color:var(--accent);font-weight:600}
+.fn-str-preview{margin-top:80px;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;background:linear-gradient(135deg,rgba(168,100,255,0.04),transparent);border:1px solid var(--border);border-radius:24px;padding:60px}
+.fn-str-preview-title{font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-0.5px;margin:14px 0 18px;line-height:1.3}
+.fn-str-preview-desc{font-size:15.5px;line-height:1.75;color:rgba(255,255,255,0.7);margin-bottom:26px}
+.fn-str-preview-list{list-style:none;padding:0;margin:0}
+.fn-str-preview-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid var(--border);font-size:14.5px;color:rgba(255,255,255,0.85)}
+.fn-str-preview-list li:last-child{border-bottom:1px solid var(--border)}
+.fn-str-preview-list li::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:9px;box-shadow:0 0 10px rgba(168,100,255,0.6)}
+.fn-str-preview-img{position:relative}
+.fn-str-preview-img img{width:100%;border-radius:14px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+@media(max-width:900px){.fn-str-preview{grid-template-columns:1fr;gap:36px;padding:36px}}
+@media(max-width:768px){.fn-str-grid{grid-template-columns:1fr;gap:14px}.fn-str{padding:90px 24px}.fn-str-card{padding:32px 24px}}
+</style>
+<section class="fn-str">
+  <div class="fn-str-inner">
+    <div class="fn-str-head reveal">
+      <span class="sec-label">Strengths</span>
+      <h2 class="sec-heading">왜 에프유피넥스인가</h2>
+      <p class="sec-desc" style="margin:18px auto 0">단순 정보 큐레이션을 넘어, 실행까지 책임지는 4가지 강점.</p>
+    </div>
+    <div class="fn-str-grid">
+      <div class="fn-str-card reveal">
+        <span class="fn-str-num">STRENGTH 01</span>
+        <div class="fn-str-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3 class="fn-str-title">현장에서 검증된 콘텐츠</h3>
+        <p class="fn-str-desc">에프유피글로벌파트너스의 <strong>실제 컨설팅 사례</strong>에서 추출한 노하우를 체계화. 이론이 아닌, 현장에서 통하는 가이드입니다.</p>
+      </div>
+      <div class="fn-str-card reveal">
+        <span class="fn-str-num">STRENGTH 02</span>
+        <div class="fn-str-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="fn-str-title">공식 기관 자료 기반</h3>
+        <p class="fn-str-desc">중소벤처기업부·특허청·신용보증기금 등 <strong>8개 공식 기관의 1차 자료</strong>를 자동 수집·분석해 콘텐츠를 구축합니다.</p>
+      </div>
+      <div class="fn-str-card reveal">
+        <span class="fn-str-num">STRENGTH 03</span>
+        <div class="fn-str-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></div>
+        <h3 class="fn-str-title">맞춤형 진단과 추천</h3>
+        <p class="fn-str-desc">업종·규모·업력에 맞춰 <strong>최적의 경영 전략</strong>을 추천합니다. 획일적 정보가 아닌, 우리 회사 상황에 맞춘 가이드.</p>
+      </div>
+      <div class="fn-str-card reveal">
+        <span class="fn-str-num">STRENGTH 04</span>
+        <div class="fn-str-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3 class="fn-str-title">탐색에서 실행까지, 하나의 흐름</h3>
+        <p class="fn-str-desc">정보 탐색 → 자가 진단 → 실행 가이드 → 전문가 자문 → <strong>서류 템플릿</strong>까지, 경영 과제의 전 과정을 한 앱으로.</p>
+      </div>
+    </div>
+
+    <!-- 실제 모바일 UI 미리보기 -->
+    <div class="fn-str-preview reveal">
+      <div class="fn-str-preview-text">
+        <span class="sec-label">Mobile Preview</span>
+        <h3 class="fn-str-preview-title">강점을 카드로 확인하는 직관적 UI</h3>
+        <p class="fn-str-preview-desc">68점·상위 32% 양호 같은 진단 등급과, 12,847건의 표준 양식 라이브러리, 그리고 인증 카테고리별 가이드를 한 화면에서 빠르게 탐색할 수 있도록 설계했습니다.</p>
+        <ul class="fn-str-preview-list">
+          <li><span>레이더 차트 기반 종합 진단</span></li>
+          <li><span>카테고리별 양식·신청서 라이브러리</span></li>
+          <li><span>실제 컨설팅 사례 기반 가이드</span></li>
+        </ul>
+      </div>
+      <div class="fn-str-preview-img">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/strengths-cards.png" alt="에프유피넥스 강점 카드 모바일 UI 미리보기" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04c] 공식 데이터 소스 8곳 -->
+<style>
+.fn-src{padding:130px 40px;background:var(--bg)}
+.fn-src-inner{max-width:var(--max);margin:0 auto}
+.fn-src-head{text-align:center;margin-bottom:60px}
+.fn-src-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:48px}
+.fn-src-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 20px;text-align:center;transition:all 0.4s;position:relative}
+.fn-src-card:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-3px);background:rgba(168,100,255,0.02)}
+.fn-src-logo{width:48px;height:48px;margin:0 auto 14px;border-radius:10px;background:linear-gradient(135deg,rgba(168,100,255,0.15),rgba(168,100,255,0.05));display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:-0.3px;border:1px solid rgba(168,100,255,0.2)}
+.fn-src-name{font-size:13.5px;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:-0.2px;line-height:1.35}
+.fn-src-type{font-size:11px;color:var(--sub);letter-spacing:0.3px}
+
+.fn-src-banner{padding:32px 36px;background:linear-gradient(135deg,rgba(168,100,255,0.08),rgba(168,100,255,0.02));border:1px solid rgba(168,100,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+.fn-src-banner svg{width:24px;height:24px;color:var(--accent);flex-shrink:0}
+.fn-src-banner p{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.6}
+.fn-src-banner strong{color:var(--accent)}
+
+.fn-src-gallery-head{text-align:center;margin:96px auto 40px;max-width:720px}
+.fn-src-gallery-title{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-0.5px;margin:14px 0 14px;line-height:1.3}
+.fn-src-gallery-desc{font-size:15px;line-height:1.7;color:var(--sub)}
+.fn-src-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fn-src-shot{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.4s;margin:0}
+.fn-src-shot:hover{border-color:rgba(168,100,255,0.4);transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,0,0,0.4)}
+.fn-src-shot img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#0a0a0a;display:block}
+.fn-src-shot figcaption{padding:16px 18px;border-top:1px solid var(--border)}
+.fn-src-shot-tag{display:inline-block;font-size:11px;letter-spacing:1.5px;color:var(--accent);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.fn-src-shot-meta{display:block;font-size:13px;color:rgba(255,255,255,0.7);line-height:1.5}
+.fn-src-shot-meta strong{color:#fff;font-weight:700}
+@media(max-width:1024px){.fn-src-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.fn-src-grid{grid-template-columns:repeat(2,1fr)}.fn-src{padding:90px 24px}}
+@media(max-width:560px){.fn-src-gallery{grid-template-columns:1fr}}
+</style>
+<section class="fn-src">
+  <div class="fn-src-inner">
+    <div class="fn-src-head reveal">
+      <span class="sec-label">Official Data Sources</span>
+      <h2 class="sec-heading">8개 공식 기관의<br/>1차 자료에서 직접 수집합니다</h2>
+      <p class="sec-desc" style="margin:18px auto 0">검증되지 않은 블로그·카더라가 아닌, 정부·공공기관의 공식 자료만 자동으로 수집·구조화하여 제공합니다.</p>
+    </div>
+    <div class="fn-src-grid">
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">중기부</div>
+        <h4 class="fn-src-name">중소벤처기업부</h4>
+        <p class="fn-src-type">사업공고 · 정책자금</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">KOVA</div>
+        <h4 class="fn-src-name">벤처기업협회</h4>
+        <p class="fn-src-type">벤처 인증 · 등급평가</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">KODIT</div>
+        <h4 class="fn-src-name">신용보증기금</h4>
+        <p class="fn-src-type">신용보증 · 운영자금</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">KIBO</div>
+        <h4 class="fn-src-name">기술보증기금</h4>
+        <p class="fn-src-type">기술평가 · 지식재산공제</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">ON-Biz</div>
+        <h4 class="fn-src-name">신용보증재단</h4>
+        <p class="fn-src-type">혁신아이콘 · 창업지원</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">KBIZ</div>
+        <h4 class="fn-src-name">중소기업중앙회</h4>
+        <p class="fn-src-type">동반자 사업 · 협업</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">조달청</div>
+        <h4 class="fn-src-name">정부 입찰공고</h4>
+        <p class="fn-src-type">입찰 · 공공조달</p>
+      </div>
+      <div class="fn-src-card reveal">
+        <div class="fn-src-logo">KIPRIS</div>
+        <h4 class="fn-src-name">특허청 키프리스</h4>
+        <p class="fn-src-type">특허 · 상표 · 디자인</p>
+      </div>
+    </div>
+    <div class="fn-src-banner reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M9 12l2 2 4-4"/></svg>
+      <p>매일 자동 크롤링 · 변경 사항 즉시 반영 · <strong>모든 정보는 공식 출처 1차 자료 기반</strong></p>
+    </div>
+
+    <!-- 실제 사이트 캡쳐 갤러리 -->
+    <div class="fn-src-gallery-head reveal">
+      <span class="sec-label" style="text-align:center;display:block">Live Sources</span>
+      <h3 class="fn-src-gallery-title">이 화면들을 매일 자동으로 모니터링합니다</h3>
+      <p class="fn-src-gallery-desc">사용자가 직접 8개 사이트를 돌아다닐 필요 없이, 모든 공고·변경사항을 한 곳에서 확인할 수 있습니다.</p>
+    </div>
+    <div class="fn-src-gallery">
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-mss.png" alt="중소벤처기업부 사업공고 화면" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">중소벤처기업부</span>
+          <span class="fn-src-shot-meta">사업공고 · <strong>2,111건</strong> 모니터링</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-kova.png" alt="KOVA 벤처기업협회 벤처소식" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">벤처기업협회</span>
+          <span class="fn-src-shot-meta">벤처소식 · <strong>1,396건</strong> 분류</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-bizinfo.png" alt="기업마당 지원사업" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">기업마당</span>
+          <span class="fn-src-shot-meta">신청 가능 <strong>1,490건</strong> 실시간</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-kibo.png" alt="KIBO 기술보증기금" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">기술보증기금</span>
+          <span class="fn-src-shot-meta">지식재산공제 · 보증상품 정보</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-onbiz.png" alt="신보 ON-Biz 혁신아이콘" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">신보 ON-Biz</span>
+          <span class="fn-src-shot-meta">혁신아이콘 · 스케일업 자금</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-g2b.png" alt="조달청 입찰공고" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">조달청</span>
+          <span class="fn-src-shot-meta">입찰공고 · 공공조달 매칭</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-kipris.png" alt="KIPRIS 특허 상표 검색" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">KIPRIS 특허청</span>
+          <span class="fn-src-shot-meta">BIZNAVI 상표 <strong>11건</strong> 자산 확인</span>
+        </figcaption>
+      </figure>
+      <figure class="fn-src-shot reveal">
+        <img src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/assets/fupnex/source-iros.png" alt="인터넷등기소" loading="lazy"/>
+        <figcaption>
+          <span class="fn-src-shot-tag">인터넷등기소</span>
+          <span class="fn-src-shot-meta">법인등기 · 부동산등기 연동</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-04d] 자산 카운터 -->
+<style>
+.fn-asset{padding:120px 40px;background:linear-gradient(180deg,var(--bg) 0%,#0a0612 100%)}
+.fn-asset-inner{max-width:var(--max);margin:0 auto}
+.fn-asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fn-asset-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:48px 36px;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
+.fn-asset-card::after{content:'';position:absolute;top:-50%;right:-50%;width:200px;height:200px;background:radial-gradient(circle,rgba(168,100,255,0.15) 0%,transparent 70%);transition:transform 0.6s;opacity:0.5}
+.fn-asset-card:hover::after{transform:scale(1.4)}
+.fn-asset-card:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-4px)}
+.fn-asset-icon{width:54px;height:54px;border-radius:14px;background:rgba(168,100,255,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;z-index:1}
+.fn-asset-icon svg{width:26px;height:26px;color:var(--accent)}
+.fn-asset-num{font-size:clamp(48px,6vw,68px);font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-2px;line-height:1;display:block;position:relative;z-index:1}
+.fn-asset-unit{font-size:24px;color:var(--accent);margin-left:4px}
+.fn-asset-label{font-size:13px;letter-spacing:2px;color:rgba(255,255,255,0.85);font-weight:600;margin-top:14px;display:block;text-transform:uppercase;position:relative;z-index:1}
+.fn-asset-desc{font-size:13.5px;color:var(--sub);line-height:1.6;margin-top:12px;position:relative;z-index:1}
+@media(max-width:900px){.fn-asset-grid{grid-template-columns:1fr;gap:14px}.fn-asset{padding:90px 24px}}
+</style>
+<section class="fn-asset">
+  <div class="fn-asset-inner">
+    <div class="fn-asset-grid">
+      <div class="fn-asset-card reveal">
+        <div class="fn-asset-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <span class="fn-asset-num">12,847<span class="fn-asset-unit">+</span></span>
+        <span class="fn-asset-label">표준 양식 다운로드</span>
+        <p class="fn-asset-desc">근로계약서·정관·각종 신청서 표준 양식 라이브러리</p>
+      </div>
+      <div class="fn-asset-card reveal">
+        <div class="fn-asset-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13L17 22l-5-3-5 3 1.5-9"/></svg></div>
+        <span class="fn-asset-num">11<span class="fn-asset-unit">건</span></span>
+        <span class="fn-asset-label">상표 등록 보유</span>
+        <p class="fn-asset-desc">KIPRIS 등록 BIZNAVI 상표 자산 (브랜드 보호 완료)</p>
+      </div>
+      <div class="fn-asset-card reveal">
+        <div class="fn-asset-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <span class="fn-asset-num">8<span class="fn-asset-unit">곳</span></span>
+        <span class="fn-asset-label">공식 데이터 소스</span>
+        <p class="fn-asset-desc">정부·공공기관 1차 자료 자동 연동</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-05] KPI -->
+<style>
+.fn-kpi{padding:140px 40px;background:linear-gradient(180deg,var(--bg) 0%,#070707 100%)}
+.fn-kpi-inner{max-width:var(--max);margin:0 auto}
+.fn-kpi-head{text-align:center;margin-bottom:72px}
+.fn-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fn-kpi-card{text-align:center;padding:44px 22px;border:1px solid var(--border);border-radius:18px;background:radial-gradient(circle at top,rgba(168,100,255,0.06),transparent 70%);transition:all 0.4s}
+.fn-kpi-card:hover{border-color:rgba(168,100,255,0.3);transform:translateY(-6px)}
+.fn-kpi-num{font-size:clamp(44px,5.5vw,64px);font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-2px;line-height:1;display:block}
+.fn-kpi-unit{font-size:22px;color:var(--accent);margin-left:4px}
+.fn-kpi-label{font-size:13px;letter-spacing:2px;color:rgba(255,255,255,0.85);font-weight:600;margin-top:18px;display:block}
+.fn-kpi-desc{font-size:13px;color:var(--sub);line-height:1.6;margin-top:10px}
+@media(max-width:900px){.fn-kpi-grid{grid-template-columns:repeat(2,1fr)}.fn-kpi{padding:100px 24px}}
+</style>
+<section class="fn-kpi">
+  <div class="fn-kpi-inner">
+    <div class="fn-kpi-head reveal">
+      <span class="sec-label">Proven Results</span>
+      <h2 class="sec-heading">데이터로 검증된 성과</h2>
+    </div>
+    <div class="fn-kpi-grid">
+      <div class="fn-kpi-card reveal">
+        <span class="fn-kpi-num">94<span class="fn-kpi-unit">%</span></span>
+        <span class="fn-kpi-label">인증 통과율</span>
+        <p class="fn-kpi-desc">벤처·이노비즈 등 주요 인증</p>
+      </div>
+      <div class="fn-kpi-card reveal">
+        <span class="fn-kpi-num">2.4<span class="fn-kpi-unit">억</span></span>
+        <span class="fn-kpi-label">평균 정책자금 확보액</span>
+        <p class="fn-kpi-desc">도입 1년 이내 기업당 평균</p>
+      </div>
+      <div class="fn-kpi-card reveal">
+        <span class="fn-kpi-num">10<span class="fn-kpi-unit">분</span></span>
+        <span class="fn-kpi-label">진단 소요 시간</span>
+        <p class="fn-kpi-desc">기업 정보 입력부터 결과까지</p>
+      </div>
+      <div class="fn-kpi-card reveal">
+        <span class="fn-kpi-num">70<span class="fn-kpi-unit">%</span></span>
+        <span class="fn-kpi-label">컨설팅 비용 절감</span>
+        <p class="fn-kpi-desc">기존 외주 대비 평균치</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [FN-06] 도입 프로세스 -->
+<style>
+.fn-process{padding:120px 40px;background:var(--bg)}
+.fn-process-inner{max-width:var(--max);margin:0 auto}
+.fn-process-head{text-align:center;margin-bottom:72px}
+.fn-process-list{display:flex;flex-direction:column;gap:18px}
+.fn-process-item{display:grid;grid-template-columns:80px 1fr 180px;align-items:center;gap:32px;padding:32px;background:var(--card);border:1px solid var(--border);border-radius:16px;transition:all 0.3s}
+.fn-process-item:hover{border-color:rgba(168,100,255,0.3);background:rgba(168,100,255,0.02)}
+.fn-process-num{font-size:48px;font-weight:800;color:var(--accent);line-height:1;letter-spacing:-2px;opacity:0.6}
+.fn-process-content h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-0.3px}
+.fn-process-content p{font-size:14.5px;color:rgba(255,255,255,0.6);line-height:1.7}
+.fn-process-meta{font-size:13px;color:var(--sub);text-align:right;border-left:1px solid var(--border);padding-left:24px}
+.fn-process-meta strong{color:var(--accent);font-weight:600;display:block;margin-bottom:4px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+@media(max-width:900px){.fn-process-item{grid-template-columns:60px 1fr;gap:20px;padding:24px}.fn-process-meta{grid-column:1/3;text-align:left;border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:14px;margin-top:6px}.fn-process{padding:90px 24px}}
+</style>
+<section class="fn-process">
+  <div class="fn-process-inner">
+    <div class="fn-process-head reveal">
+      <span class="sec-label">Onboarding</span>
+      <h2 class="sec-heading">시작은 무료, 결과는 즉시</h2>
+    </div>
+    <div class="fn-process-list">
+      <div class="fn-process-item reveal">
+        <div class="fn-process-num">01</div>
+        <div class="fn-process-content"><h3>회원가입 · 기업 등록</h3><p>사업자등록증 한 장만으로 기업 정보가 자동 등록됩니다.</p></div>
+        <div class="fn-process-meta"><strong>소요</strong>1분</div>
+      </div>
+      <div class="fn-process-item reveal">
+        <div class="fn-process-num">02</div>
+        <div class="fn-process-content"><h3>AI 진단</h3><p>업종·매출·인원·R&amp;D 등을 입력하면 적용 가능한 인증·자금이 자동 매칭됩니다.</p></div>
+        <div class="fn-process-meta"><strong>소요</strong>10분</div>
+      </div>
+      <div class="fn-process-item reveal">
+        <div class="fn-process-num">03</div>
+        <div class="fn-process-content"><h3>가이드 따라 진행</h3><p>선택한 과제의 신청서·증빙 자동 작성. 누락 항목을 실시간 확인할 수 있습니다.</p></div>
+        <div class="fn-process-meta"><strong>소요</strong>과제별 상이</div>
+      </div>
+      <div class="fn-process-item reveal">
+        <div class="fn-process-num">04</div>
+        <div class="fn-process-content"><h3>전문가 자문 (선택)</h3><p>변리사·노무사·세무사 자문 또는 직접 신청 중 선택할 수 있습니다.</p></div>
+        <div class="fn-process-meta"><strong>소요</strong>1~3일</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [FN-07] CTA -->
+<style>
+.fn-cta{padding:140px 40px;background:radial-gradient(ellipse at center,rgba(168,100,255,0.08) 0%,var(--bg) 70%);position:relative;overflow:hidden}
+.fn-cta-inner{max-width:880px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.fn-cta-badge{display:inline-block;padding:6px 16px;border-radius:20px;background:rgba(168,100,255,0.12);border:1px solid rgba(168,100,255,0.25);color:var(--accent);font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase;margin-bottom:28px}
+.fn-cta-title{font-size:clamp(32px,4.5vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:22px}
+.fn-cta-desc{font-size:17px;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:44px;max-width:620px;margin-left:auto;margin-right:auto}
+.fn-cta-actions{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.fn-cta-info{margin-top:48px;padding-top:36px;border-top:1px solid var(--border);display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.fn-cta-info-item{text-align:center}
+.fn-cta-info-label{font-size:11px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;margin-bottom:6px;display:block}
+.fn-cta-info-value{font-size:16px;color:#fff;font-weight:600}
+@media(max-width:640px){.fn-cta{padding:100px 24px}}
+</style>
+<section class="fn-cta">
+  <div class="fn-cta-inner">
+    <span class="fn-cta-badge reveal">Get Started</span>
+    <h2 class="fn-cta-title reveal">경영 컨설팅,<br/>이제는 앱 하나로</h2>
+    <p class="fn-cta-desc reveal">에프유피넥스에서 무료로 진단을 받아보세요. 인증·자금·세제 혜택 매칭 결과를 즉시 확인할 수 있습니다.</p>
+    <div class="fn-cta-actions reveal">
+      <a class="fn-btn fn-btn-primary" href="https://www.fupglobalpartners.com/FUP_BizNavi">에프유피넥스 시작하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="fn-cta-info reveal">
+      <div class="fn-cta-info-item">
+        <span class="fn-cta-info-label">Email</span>
+        <span class="fn-cta-info-value">fup@fupglobalpartners.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -80px 0px',threshold:0.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>

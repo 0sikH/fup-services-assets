@@ -1,0 +1,275 @@
+<!--
+  ============================================
+  [엑소좀 특허 랜딩페이지]
+  엑소좀 기반 기능성 화장품 조성물
+  ============================================
+-->
+
+<style>
+:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#5b9cf5;--accent2:#8bbcff;--accent-dark:#2d6fd0;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--max:1200px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:18px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:640px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto}
+</style>
+
+<!-- [PX-01] 히어로 -->
+<style>
+.px-hero{position:relative;width:100%;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.px-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.px-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,10,25,0.5) 0%,rgba(0,10,25,0.3) 40%,rgba(5,5,5,0.88) 100%);z-index:1}
+.px-hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:960px}
+.px-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:24px;background:rgba(91,156,245,0.12);border:1px solid rgba(91,156,245,0.3);font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:600;margin-bottom:28px;text-transform:uppercase}
+.px-hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:pxPulse 2s infinite}
+@keyframes pxPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.px-hero-title{font-size:clamp(34px,5.5vw,68px);font-weight:800;line-height:1.15;letter-spacing:-1.5px;margin-bottom:24px}
+.px-hero-title em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.px-hero-desc{font-size:clamp(15px,1.5vw,18px);line-height:1.7;color:rgba(255,255,255,0.75);max-width:720px;margin:0 auto 40px}
+.px-hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.px-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:32px;font-size:14px;font-weight:600;letter-spacing:0.5px;transition:all 0.3s;cursor:pointer;border:none}
+.px-btn-primary{background:var(--accent);color:#fff}
+.px-btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(91,156,245,0.4)}
+.px-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.25)}
+.px-btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.px-btn svg{width:16px;height:16px}
+@media(max-width:640px){.px-hero{height:90vh;min-height:540px}}
+</style>
+<section class="px-hero">
+  <video class="px-hero-video" src="https://raw.githubusercontent.com/0sikH/fup-services-assets/main/home/video-patent.mp4" autoplay muted loop playsinline></video>
+  <div class="px-hero-overlay"></div>
+  <div class="px-hero-inner">
+    <span class="px-hero-badge">Patent · Cosmetic Composition</span>
+    <h1 class="px-hero-title"><em>엑소좀</em>,<br/>피부의 미래를 그립니다</h1>
+    <p class="px-hero-desc">엑소좀을 유효성분으로 함유하는 기능성 화장품 조성물 특허 등록. 피부 개선·주름 완화·진정·탄력까지, 한 성분으로 완성하는 차세대 스킨케어 기술입니다.</p>
+    <div class="px-hero-cta">
+      <a class="px-btn px-btn-primary" href="#px-efficacy">효능 살펴보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="px-btn px-btn-ghost" href="#px-patent">특허 정보</a>
+    </div>
+  </div>
+</section>
+
+<!-- [PX-02] 엑소좀이란 -->
+<style>
+.px-intro{padding:130px 40px;background:var(--bg)}
+.px-intro-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.px-intro-text h2{margin-bottom:24px}
+.px-intro-text p{font-size:16px;line-height:1.85;color:rgba(255,255,255,0.75);margin-bottom:18px}
+.px-intro-text p strong{color:var(--accent);font-weight:600}
+.px-intro-visual{position:relative;height:420px;border-radius:18px;background:radial-gradient(circle at center,rgba(91,156,245,0.15) 0%,transparent 70%);display:flex;align-items:center;justify-content:center}
+.px-cell{position:absolute;border-radius:50%;border:1px solid rgba(91,156,245,0.4)}
+.px-cell.c1{width:280px;height:280px;background:radial-gradient(circle,rgba(91,156,245,0.08),transparent);animation:pxFloat 6s ease-in-out infinite}
+.px-cell.c2{width:80px;height:80px;background:radial-gradient(circle,rgba(91,156,245,0.25),rgba(91,156,245,0.05));top:30%;left:30%;animation:pxFloat 4s ease-in-out infinite reverse}
+.px-cell.c3{width:60px;height:60px;background:radial-gradient(circle,rgba(139,188,255,0.2),rgba(139,188,255,0.05));top:55%;right:25%;animation:pxFloat 5s ease-in-out infinite 1s}
+.px-cell.c4{width:40px;height:40px;background:radial-gradient(circle,rgba(91,156,245,0.3),transparent);bottom:25%;left:25%;animation:pxFloat 7s ease-in-out infinite 0.5s}
+.px-cell.c5{width:30px;height:30px;background:radial-gradient(circle,rgba(139,188,255,0.25),transparent);top:25%;right:30%;animation:pxFloat 4.5s ease-in-out infinite 1.5s}
+@keyframes pxFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-10px)}}
+.px-cell-label{position:absolute;font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:700;text-transform:uppercase;text-align:center;z-index:2}
+.px-cell-label.main{top:50%;left:50%;transform:translate(-50%,-50%);font-size:24px;letter-spacing:6px;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@media(max-width:900px){.px-intro-inner{grid-template-columns:1fr;gap:48px}.px-intro{padding:90px 24px}.px-intro-visual{height:300px}}
+</style>
+<section class="px-intro">
+  <div class="px-intro-inner">
+    <div class="px-intro-text reveal">
+      <span class="sec-label">What is Exosome</span>
+      <h2 class="sec-heading">엑소좀이란?</h2>
+      <p>엑소좀(Exosome)은 세포가 분비하는 <strong>30~150nm 크기의 소포체</strong>로, 세포 간 신호 전달을 담당하는 핵심 매개체입니다. 단백질·핵산·지질 등을 안전하게 전달하여 피부 재생과 항산화 반응을 직접 유도합니다.</p>
+      <p>기존 화장품 성분은 각질층 위에서만 작용했다면, 엑소좀은 <strong>피부 깊은 층까지 침투</strong>해 세포 단위에서 변화를 일으킵니다. 차세대 피부 과학의 핵심 키워드로 주목받는 이유입니다.</p>
+    </div>
+    <div class="px-intro-visual reveal">
+      <div class="px-cell c1"></div>
+      <div class="px-cell c2"></div>
+      <div class="px-cell c3"></div>
+      <div class="px-cell c4"></div>
+      <div class="px-cell c5"></div>
+      <span class="px-cell-label main">EXOSOME</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [PX-03] 4가지 효능 -->
+<style>
+.px-eff{padding:120px 40px;background:linear-gradient(180deg,var(--bg) 0%,#050a14 50%,var(--bg) 100%)}
+.px-eff-inner{max-width:var(--max);margin:0 auto}
+.px-eff-head{text-align:center;margin-bottom:64px}
+.px-eff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.px-eff-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:36px 28px;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
+.px-eff-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at top,rgba(91,156,245,0.08),transparent 60%);opacity:0;transition:opacity 0.4s}
+.px-eff-card:hover::before{opacity:1}
+.px-eff-card:hover{border-color:rgba(91,156,245,0.3);transform:translateY(-6px)}
+.px-eff-num{font-size:14px;font-weight:800;color:var(--accent);letter-spacing:2px;margin-bottom:14px;display:block;position:relative;z-index:1}
+.px-eff-icon{width:64px;height:64px;border-radius:16px;background:rgba(91,156,245,0.1);border:1px solid rgba(91,156,245,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative;z-index:1}
+.px-eff-icon svg{width:30px;height:30px;color:var(--accent)}
+.px-eff-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;position:relative;z-index:1}
+.px-eff-desc{font-size:14px;line-height:1.7;color:var(--sub);position:relative;z-index:1}
+@media(max-width:900px){.px-eff-grid{grid-template-columns:repeat(2,1fr)}.px-eff{padding:90px 24px}}
+@media(max-width:480px){.px-eff-grid{grid-template-columns:1fr}}
+</style>
+<section class="px-eff" id="px-efficacy">
+  <div class="px-eff-inner">
+    <div class="px-eff-head reveal">
+      <span class="sec-label">4 Core Efficacies</span>
+      <h2 class="sec-heading">한 성분, 네 가지 작용</h2>
+      <p class="sec-desc" style="margin:18px auto 0">엑소좀이 피부 세포에 직접 신호를 보내 네 가지 핵심 효능을 동시에 발휘합니다.</p>
+    </div>
+    <div class="px-eff-grid">
+      <div class="px-eff-card reveal">
+        <span class="px-eff-num">EFFICACY 01</span>
+        <div class="px-eff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.8 5.7 21l2.3-7.2L2 9.4h7.6z"/></svg></div>
+        <h3 class="px-eff-title">피부 개선</h3>
+        <p class="px-eff-desc">손상된 피부 장벽을 회복하고 결을 매끄럽게 다듬어 건강한 피부를 만듭니다.</p>
+      </div>
+      <div class="px-eff-card reveal">
+        <span class="px-eff-num">EFFICACY 02</span>
+        <div class="px-eff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3 class="px-eff-title">주름 완화</h3>
+        <p class="px-eff-desc">콜라겐 합성을 촉진해 잔주름과 깊은 주름을 동시에 완화시킵니다.</p>
+      </div>
+      <div class="px-eff-card reveal">
+        <span class="px-eff-num">EFFICACY 03</span>
+        <div class="px-eff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3 class="px-eff-title">피부 진정</h3>
+        <p class="px-eff-desc">민감해진 피부의 염증 반응을 완화해 빠르게 진정시킵니다.</p>
+      </div>
+      <div class="px-eff-card reveal">
+        <span class="px-eff-num">EFFICACY 04</span>
+        <div class="px-eff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3 class="px-eff-title">탄력 개선</h3>
+        <p class="px-eff-desc">엘라스틴 활성을 도와 처짐을 완화하고 탄력 있는 피부 결을 유지합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [PX-04] 특허 등록 정보 -->
+<style>
+.px-patent{padding:130px 40px;background:var(--bg)}
+.px-patent-inner{max-width:var(--max);margin:0 auto}
+.px-patent-head{text-align:center;margin-bottom:60px}
+.px-patent-doc{max-width:880px;margin:0 auto;background:linear-gradient(180deg,#0a0a0a 0%,#080808 100%);border:1px solid var(--border);border-radius:20px;padding:48px 52px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+.px-patent-stamp{position:absolute;top:32px;right:32px;width:88px;height:88px;border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:1.5px;text-align:center;line-height:1.3;transform:rotate(-12deg);background:rgba(91,156,245,0.05)}
+.px-patent-label{font-size:11px;letter-spacing:3px;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:14px;display:block}
+.px-patent-title{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.4;letter-spacing:-0.3px;max-width:680px}
+.px-patent-eng{font-size:14px;color:var(--sub);margin-bottom:36px;font-style:italic;max-width:680px}
+.px-patent-table{display:grid;grid-template-columns:140px 1fr;gap:16px 32px;padding-top:28px;border-top:1px solid var(--border)}
+.px-patent-table dt{font-size:12px;letter-spacing:2px;color:var(--sub);font-weight:600;text-transform:uppercase}
+.px-patent-table dd{font-size:15px;color:#fff;font-weight:500}
+.px-patent-table dd strong{color:var(--accent);font-weight:700}
+@media(max-width:640px){.px-patent{padding:90px 16px}.px-patent-doc{padding:32px 24px}.px-patent-stamp{width:60px;height:60px;font-size:9px;top:18px;right:18px}.px-patent-table{grid-template-columns:1fr;gap:6px}.px-patent-table dt{margin-top:14px}}
+</style>
+<section class="px-patent" id="px-patent">
+  <div class="px-patent-inner">
+    <div class="px-patent-head reveal">
+      <span class="sec-label">Patent Registration</span>
+      <h2 class="sec-heading">대한민국 특허 등록 완료</h2>
+    </div>
+    <div class="px-patent-doc reveal">
+      <div class="px-patent-stamp">REG.<br/>PATENT</div>
+      <span class="px-patent-label">특허 등록증</span>
+      <h3 class="px-patent-title">엑소좀을 유효성분으로 함유하는 피부 개선, 주름 완화, 피부 진정 및 피부 탄력 개선용 화장품 조성물</h3>
+      <p class="px-patent-eng">Cosmetic Composition Containing Exosomes as an Active Ingredient for Skin Improvement, Wrinkle Alleviation, Skin Soothing and Skin Elasticity Enhancement</p>
+      <dl class="px-patent-table">
+        <dt>출원인 · 권리자</dt><dd><strong>주식회사 에프유피글로벌파트너스</strong></dd>
+        <dt>심사 상태</dt><dd><strong>등록결정 (등록)</strong></dd>
+        <dt>기술 분야</dt><dd>기능성 화장품 조성물 / 바이오 화장품</dd>
+        <dt>핵심 효능</dt><dd>피부 개선 · 주름 완화 · 피부 진정 · 탄력 개선</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [PX-05] 응용 가치 -->
+<style>
+.px-value{padding:120px 40px;background:linear-gradient(180deg,#050a14 0%,var(--bg) 100%)}
+.px-value-inner{max-width:var(--max);margin:0 auto}
+.px-value-head{text-align:center;margin-bottom:64px}
+.px-value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.px-val-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px 30px;transition:all 0.4s}
+.px-val-card:hover{border-color:rgba(91,156,245,0.3);transform:translateY(-4px)}
+.px-val-icon{width:54px;height:54px;border-radius:14px;background:rgba(91,156,245,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.px-val-icon svg{width:26px;height:26px;color:var(--accent)}
+.px-val-title{font-size:19px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
+.px-val-desc{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.6)}
+@media(max-width:900px){.px-value-grid{grid-template-columns:1fr;gap:16px}.px-value{padding:90px 24px}}
+</style>
+<section class="px-value">
+  <div class="px-value-inner">
+    <div class="px-value-head reveal">
+      <span class="sec-label">Why It Matters</span>
+      <h2 class="sec-heading">특허가 만든 사업적 가치</h2>
+    </div>
+    <div class="px-value-grid">
+      <div class="px-val-card reveal">
+        <div class="px-val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg></div>
+        <h3 class="px-val-title">독자 기술력 확보</h3>
+        <p class="px-val-desc">엑소좀 화장품 조성 특허로 경쟁사가 모방할 수 없는 자체 IP 자산을 확보했습니다.</p>
+      </div>
+      <div class="px-val-card reveal">
+        <div class="px-val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h3 class="px-val-title">글로벌 라이선싱 기반</h3>
+        <p class="px-val-desc">K-뷰티 시장 확대에 맞춰 해외 OEM·ODM 파트너에게 특허 기술을 공급할 수 있습니다.</p>
+      </div>
+      <div class="px-val-card reveal">
+        <div class="px-val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75"/></svg></div>
+        <h3 class="px-val-title">B2B 신뢰 기반</h3>
+        <p class="px-val-desc">대형 유통사·플랫폼과의 협상에서 '특허 보유'는 강력한 신뢰 자산이 됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [PX-06] CTA -->
+<style>
+.px-cta{padding:140px 40px;background:radial-gradient(ellipse at center,rgba(91,156,245,0.08) 0%,var(--bg) 70%);position:relative;overflow:hidden}
+.px-cta-inner{max-width:880px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.px-cta-badge{display:inline-block;padding:6px 16px;border-radius:20px;background:rgba(91,156,245,0.12);border:1px solid rgba(91,156,245,0.25);color:var(--accent);font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase;margin-bottom:28px}
+.px-cta-title{font-size:clamp(32px,4.5vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:22px}
+.px-cta-desc{font-size:17px;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:44px;max-width:620px;margin-left:auto;margin-right:auto}
+.px-cta-actions{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.px-cta-info{margin-top:48px;padding-top:36px;border-top:1px solid var(--border);display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.px-cta-info-item{text-align:center}
+.px-cta-info-label{font-size:11px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;margin-bottom:6px;display:block}
+.px-cta-info-value{font-size:16px;color:#fff;font-weight:600}
+@media(max-width:640px){.px-cta{padding:100px 24px}}
+</style>
+<section class="px-cta">
+  <div class="px-cta-inner">
+    <span class="px-cta-badge reveal">Partnership</span>
+    <h2 class="px-cta-title reveal">엑소좀 기술 협업 ·<br/>OEM/ODM 문의</h2>
+    <p class="px-cta-desc reveal">특허 기반 엑소좀 화장품 제조, 공동 개발, 라이선싱 협업을 제안하세요.</p>
+    <div class="px-cta-actions reveal">
+      <a class="px-btn px-btn-primary" href="https://www.fupglobalpartners.com/contact">기술 협업 문의
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="px-cta-info reveal">
+      <div class="px-cta-info-item">
+        <span class="px-cta-info-label">Email</span>
+        <span class="px-cta-info-value">fup@fupglobalpartners.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -80px 0px',threshold:0.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
