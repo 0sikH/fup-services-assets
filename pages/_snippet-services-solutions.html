@@ -1,0 +1,138 @@
+<!--
+  ============================================
+  [/services 페이지 끝에 붙일 솔루션 섹션 스니펫]
+
+  사용법:
+    메인 사이트 /services 페이지의 06 Smart Factory 섹션 다음에
+    이 코드 블록을 통째로 붙여넣으세요.
+
+    href는 메인 사이트 라우팅에 맞춰 조정:
+      /pages/smartfactory.html → 메인 사이트 실제 경로로
+  ============================================
+-->
+
+<style>
+.fup-sol-section{padding:120px 40px;background:#050505;color:#fff;font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased}
+.fup-sol-section *,.fup-sol-section *::before,.fup-sol-section *::after{box-sizing:border-box}
+.fup-sol-inner{max-width:1200px;margin:0 auto}
+.fup-sol-head{text-align:center;margin-bottom:64px}
+.fup-sol-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;display:block;font-weight:600}
+.fup-sol-title{font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin:0 0 18px;color:#fff}
+.fup-sol-desc{font-size:15.5px;line-height:1.7;color:rgba(255,255,255,0.6);max-width:640px;margin:0 auto}
+
+.fup-sol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:40px}
+.fup-sol-card{display:block;padding:36px 32px;background:#0c0c0c;border:1px solid #181818;border-radius:18px;transition:all 0.4s;text-decoration:none;color:#fff;position:relative;overflow:hidden}
+.fup-sol-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--fup-c);transition:width 0.4s}
+.fup-sol-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,0.15);background:#101010}
+.fup-sol-card:hover::before{width:6px}
+.fup-sol-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.fup-sol-card-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;color:var(--fup-c)}
+.fup-sol-card-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--fup-c);box-shadow:0 0 8px var(--fup-c)}
+.fup-sol-card-num{font-size:11px;color:rgba(255,255,255,0.3);font-weight:600;letter-spacing:1.5px}
+.fup-sol-card-title{font-size:22px;font-weight:700;letter-spacing:-0.3px;margin:0 0 10px;color:#fff;line-height:1.3}
+.fup-sol-card-desc{font-size:14px;line-height:1.65;color:rgba(255,255,255,0.6);margin:0 0 22px}
+.fup-sol-card-meta{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08)}
+.fup-sol-card-stats{font-size:12.5px;color:rgba(255,255,255,0.7);letter-spacing:0.3px}
+.fup-sol-card-stats strong{color:var(--fup-c);font-weight:700;margin-right:4px}
+.fup-sol-card-arrow{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);transition:all 0.3s;flex-shrink:0}
+.fup-sol-card-arrow svg{width:13px;height:13px;color:#fff;transition:transform 0.3s}
+.fup-sol-card:hover .fup-sol-card-arrow{background:var(--fup-c)}
+.fup-sol-card:hover .fup-sol-card-arrow svg{transform:translateX(2px);color:#000}
+
+.fup-sol-c-mint{--fup-c:#2dd4a8}
+.fup-sol-c-purple{--fup-c:#a864ff}
+.fup-sol-c-blue{--fup-c:#5b9cf5}
+.fup-sol-c-pink{--fup-c:#ff6b9d}
+
+.fup-sol-footer{text-align:center;padding-top:36px;border-top:1px solid #181818}
+.fup-sol-footer-link{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;padding:14px 28px;border-radius:30px;border:1px solid rgba(255,255,255,0.15);transition:all 0.3s}
+.fup-sol-footer-link svg{width:14px;height:14px;transition:transform 0.3s}
+.fup-sol-footer-link:hover{background:#fff;color:#000;border-color:#fff}
+.fup-sol-footer-link:hover svg{transform:translateX(4px)}
+
+@media(max-width:768px){
+  .fup-sol-section{padding:80px 24px}
+  .fup-sol-grid{grid-template-columns:1fr;gap:14px}
+  .fup-sol-card{padding:28px 24px}
+  .fup-sol-card-title{font-size:19px}
+}
+</style>
+
+<section class="fup-sol-section">
+  <div class="fup-sol-inner">
+
+    <div class="fup-sol-head">
+      <span class="fup-sol-label">Our Core Assets</span>
+      <h2 class="fup-sol-title">우리는 자체 자산을<br/>만들어 운영합니다</h2>
+      <p class="fup-sol-desc">자체 SaaS 2종과 등록 특허 2건. 컨설팅과 함께 제품·기술을 보유한 회사입니다.</p>
+    </div>
+
+    <div class="fup-sol-grid">
+
+      <!-- SaaS 1: Smart Factory -->
+      <a class="fup-sol-card fup-sol-c-mint" href="/pages/smartfactory.html">
+        <div class="fup-sol-card-top">
+          <span class="fup-sol-card-tag">Operating SaaS</span>
+          <span class="fup-sol-card-num">ASSET 01</span>
+        </div>
+        <h3 class="fup-sol-card-title">ESG Motion MES</h3>
+        <p class="fup-sol-card-desc">제조 현장 4M 실시간 운영 시스템. 셀비아 등 고객사 납품 운영.</p>
+        <div class="fup-sol-card-meta">
+          <span class="fup-sol-card-stats"><strong>41</strong>modules · <strong>9</strong>categories</span>
+          <span class="fup-sol-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- SaaS 2: FUPNEX -->
+      <a class="fup-sol-card fup-sol-c-purple" href="/pages/fupnex.html">
+        <div class="fup-sol-card-top">
+          <span class="fup-sol-card-tag">Operating SaaS</span>
+          <span class="fup-sol-card-num">ASSET 02</span>
+        </div>
+        <h3 class="fup-sol-card-title">에프유피넥스 FUPNEX</h3>
+        <p class="fup-sol-card-desc">벤처·인증·정책자금·세무 통합 진단·자문 SaaS. 8개 공공데이터 자동 연동.</p>
+        <div class="fup-sol-card-meta">
+          <span class="fup-sol-card-stats"><strong>8</strong>data sources · <strong>21</strong>advisory</span>
+          <span class="fup-sol-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Patent 1: Exosome -->
+      <a class="fup-sol-card fup-sol-c-blue" href="/pages/patent-exosome.html">
+        <div class="fup-sol-card-top">
+          <span class="fup-sol-card-tag">Registered Patent</span>
+          <span class="fup-sol-card-num">ASSET 03</span>
+        </div>
+        <h3 class="fup-sol-card-title">엑소좀 화장품 특허</h3>
+        <p class="fup-sol-card-desc">차세대 바이오 원료 기반 화장품 조성·제조 방법. K-뷰티 OEM 활용 가능.</p>
+        <div class="fup-sol-card-meta">
+          <span class="fup-sol-card-stats"><strong>등록</strong>완료 · <strong>K-Beauty</strong></span>
+          <span class="fup-sol-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Patent 2: AI Skin -->
+      <a class="fup-sol-card fup-sol-c-pink" href="/pages/patent-ai-skin.html">
+        <div class="fup-sol-card-top">
+          <span class="fup-sol-card-tag">Registered Patent</span>
+          <span class="fup-sol-card-num">ASSET 04</span>
+        </div>
+        <h3 class="fup-sol-card-title">AI 피부분석 큐레이션</h3>
+        <p class="fup-sol-card-desc">AI 기반 피부 진단 → 맞춤 화장품 추천 자동화 로직 특허.</p>
+        <div class="fup-sol-card-meta">
+          <span class="fup-sol-card-stats"><strong>등록</strong>완료 · <strong>AI</strong>큐레이션</span>
+          <span class="fup-sol-card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="fup-sol-footer">
+      <a class="fup-sol-footer-link" href="/pages/solutions.html">
+        4가지 핵심 자산 한눈에 보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
