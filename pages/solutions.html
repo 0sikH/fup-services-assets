@@ -1,0 +1,295 @@
+<!--
+  ============================================
+  [솔루션 인덱스 페이지]
+  FUP의 핵심 자산 카탈로그 (4개 솔루션 그룹핑)
+  ============================================
+-->
+
+<style>
+:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--max:1200px;
+  --c-mint:#2dd4a8;--c-purple:#a864ff;--c-blue:#5b9cf5;--c-pink:#ff6b9d}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;display:block;font-weight:600}
+.sec-heading{font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:18px}
+.sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:720px}
+.divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto}
+</style>
+
+<!-- [SL-01] 히어로 -->
+<style>
+.sl-hero{position:relative;width:100%;min-height:560px;padding:140px 40px 100px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at top,rgba(255,255,255,0.04) 0%,var(--bg) 60%);overflow:hidden}
+.sl-hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:conic-gradient(from 0deg,rgba(45,212,168,0.08),rgba(168,100,255,0.08),rgba(91,156,245,0.08),rgba(255,107,157,0.08),rgba(45,212,168,0.08));border-radius:50%;filter:blur(80px);opacity:0.6;z-index:0;animation:slSpin 30s linear infinite}
+@keyframes slSpin{to{transform:translateX(-50%) rotate(360deg)}}
+.sl-hero-inner{position:relative;z-index:1;text-align:center;max-width:920px}
+.sl-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);font-size:12px;letter-spacing:3px;color:rgba(255,255,255,0.85);font-weight:600;margin-bottom:32px;text-transform:uppercase}
+.sl-hero-badge span{width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--c-mint),var(--c-pink));box-shadow:0 0 12px rgba(255,107,157,0.6);animation:slPulse 2s infinite}
+@keyframes slPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.sl-hero-title{font-size:clamp(38px,6vw,72px);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:28px}
+.sl-hero-title em{font-style:normal;background:linear-gradient(135deg,var(--c-mint) 0%,var(--c-purple) 33%,var(--c-blue) 66%,var(--c-pink) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl-hero-desc{font-size:clamp(16px,1.6vw,19px);line-height:1.7;color:rgba(255,255,255,0.7);max-width:720px;margin:0 auto 44px}
+.sl-hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding-top:36px;border-top:1px solid rgba(255,255,255,0.08)}
+.sl-hero-stat{text-align:center}
+.sl-hero-stat-num{font-size:32px;font-weight:800;letter-spacing:-1px;display:block;line-height:1}
+.sl-hero-stat-label{font-size:11px;color:var(--sub);letter-spacing:2px;text-transform:uppercase;margin-top:8px;display:block}
+@media(max-width:640px){.sl-hero{padding:100px 24px 70px}.sl-hero-stats{gap:28px}}
+</style>
+<section class="sl-hero">
+  <div class="sl-hero-inner">
+    <span class="sl-hero-badge"><span></span>FUP Solutions Portfolio</span>
+    <h1 class="sl-hero-title">우리는 <em>4가지 핵심 자산</em>을<br/>스스로 만들어 운영합니다</h1>
+    <p class="sl-hero-desc">자체 SaaS 2종과 등록 특허 2건. 컨설팅 회사이지만 동시에 제품·기술 회사입니다. 모든 솔루션은 실제 운영·납품 사례에서 출발했습니다.</p>
+    <div class="sl-hero-stats">
+      <div class="sl-hero-stat"><span class="sl-hero-stat-num" style="color:var(--c-mint)">2</span><span class="sl-hero-stat-label">Operating SaaS</span></div>
+      <div class="sl-hero-stat"><span class="sl-hero-stat-num" style="color:var(--c-blue)">2</span><span class="sl-hero-stat-label">Registered Patents</span></div>
+      <div class="sl-hero-stat"><span class="sl-hero-stat-num" style="color:var(--c-purple)">41+</span><span class="sl-hero-stat-label">Product Modules</span></div>
+      <div class="sl-hero-stat"><span class="sl-hero-stat-num" style="color:var(--c-pink)">11</span><span class="sl-hero-stat-label">Trademarks</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [SL-02] 그룹 1: 운영 SaaS -->
+<style>
+.sl-group{padding:130px 40px;background:var(--bg)}
+.sl-group-inner{max-width:var(--max);margin:0 auto}
+.sl-group-head{margin-bottom:60px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.sl-group-head-left{max-width:680px}
+.sl-group-head-meta{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:20px;font-size:11px;letter-spacing:2.5px;font-weight:700;text-transform:uppercase;margin-bottom:18px}
+.sl-group-head-meta::before{content:'';width:8px;height:8px;border-radius:50%}
+.sl-group-head h2{font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:14px}
+.sl-group-head p{font-size:15.5px;line-height:1.7;color:rgba(255,255,255,0.6)}
+.sl-group-head-right{font-size:13px;color:var(--sub);letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+
+.sl-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.sl-card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:44px 40px;overflow:hidden;transition:all 0.5s;min-height:480px}
+.sl-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transition:opacity 0.4s}
+.sl-card::after{content:'';position:absolute;top:0;right:0;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:0;transition:opacity 0.6s}
+.sl-card:hover::after{opacity:0.25}
+.sl-card:hover{transform:translateY(-6px);border-color:var(--card-accent,rgba(255,255,255,0.2))}
+.sl-card-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:24px;width:fit-content;position:relative;z-index:1}
+.sl-card-cat{display:block;font-size:12px;color:var(--sub);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:10px;position:relative;z-index:1}
+.sl-card-title{font-size:32px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:14px;position:relative;z-index:1}
+.sl-card-desc{font-size:15px;line-height:1.7;color:rgba(255,255,255,0.65);margin-bottom:28px;flex-grow:1;position:relative;z-index:1}
+.sl-card-metrics{display:flex;gap:20px;padding:18px 0;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:26px;position:relative;z-index:1}
+.sl-card-metric{flex:1}
+.sl-card-metric-num{font-size:22px;font-weight:800;letter-spacing:-0.5px;display:block;line-height:1}
+.sl-card-metric-label{font-size:11px;color:var(--sub);letter-spacing:1px;text-transform:uppercase;margin-top:6px;display:block}
+.sl-card-cta{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:30px;font-size:13.5px;font-weight:600;letter-spacing:0.5px;transition:all 0.3s;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;width:fit-content;position:relative;z-index:1}
+.sl-card-cta svg{width:14px;height:14px;transition:transform 0.3s}
+.sl-card:hover .sl-card-cta{background:var(--card-accent);border-color:var(--card-accent);color:#000}
+.sl-card:hover .sl-card-cta svg{transform:translateX(4px)}
+
+/* 그룹1 - 운영 SaaS */
+.sl-g1 .sl-group-head-meta{background:rgba(45,212,168,0.1);color:var(--c-mint);border:1px solid rgba(45,212,168,0.25)}
+.sl-g1 .sl-group-head-meta::before{background:var(--c-mint);box-shadow:0 0 10px var(--c-mint)}
+.sl-card-mint{--card-accent:var(--c-mint)}
+.sl-card-mint::before{background:linear-gradient(90deg,transparent,var(--c-mint),transparent);opacity:0}
+.sl-card-mint:hover::before{opacity:1}
+.sl-card-mint::after{background:radial-gradient(circle,var(--c-mint),transparent)}
+.sl-card-mint .sl-card-tag{background:rgba(45,212,168,0.12);color:var(--c-mint);border:1px solid rgba(45,212,168,0.25)}
+.sl-card-mint .sl-card-metric-num{color:var(--c-mint)}
+
+.sl-card-purple{--card-accent:var(--c-purple)}
+.sl-card-purple::before{background:linear-gradient(90deg,transparent,var(--c-purple),transparent);opacity:0}
+.sl-card-purple:hover::before{opacity:1}
+.sl-card-purple::after{background:radial-gradient(circle,var(--c-purple),transparent)}
+.sl-card-purple .sl-card-tag{background:rgba(168,100,255,0.12);color:var(--c-purple);border:1px solid rgba(168,100,255,0.25)}
+.sl-card-purple .sl-card-metric-num{color:var(--c-purple)}
+
+/* 그룹2 - 특허 자산 */
+.sl-g2 .sl-group-head-meta{background:rgba(91,156,245,0.1);color:var(--c-blue);border:1px solid rgba(91,156,245,0.25)}
+.sl-g2 .sl-group-head-meta::before{background:var(--c-blue);box-shadow:0 0 10px var(--c-blue)}
+.sl-card-blue{--card-accent:var(--c-blue)}
+.sl-card-blue::before{background:linear-gradient(90deg,transparent,var(--c-blue),transparent);opacity:0}
+.sl-card-blue:hover::before{opacity:1}
+.sl-card-blue::after{background:radial-gradient(circle,var(--c-blue),transparent)}
+.sl-card-blue .sl-card-tag{background:rgba(91,156,245,0.12);color:var(--c-blue);border:1px solid rgba(91,156,245,0.25)}
+.sl-card-blue .sl-card-metric-num{color:var(--c-blue)}
+
+.sl-card-pink{--card-accent:var(--c-pink)}
+.sl-card-pink::before{background:linear-gradient(90deg,transparent,var(--c-pink),transparent);opacity:0}
+.sl-card-pink:hover::before{opacity:1}
+.sl-card-pink::after{background:radial-gradient(circle,var(--c-pink),transparent)}
+.sl-card-pink .sl-card-tag{background:rgba(255,107,157,0.12);color:var(--c-pink);border:1px solid rgba(255,107,157,0.25)}
+.sl-card-pink .sl-card-metric-num{color:var(--c-pink)}
+
+@media(max-width:900px){.sl-cards{grid-template-columns:1fr;gap:16px}.sl-group{padding:90px 24px}.sl-card{padding:36px 28px;min-height:auto}.sl-card-title{font-size:26px}}
+</style>
+
+<section class="sl-group sl-g1">
+  <div class="sl-group-inner">
+    <div class="sl-group-head reveal">
+      <div class="sl-group-head-left">
+        <span class="sl-group-head-meta">Operating SaaS · 자체 SaaS</span>
+        <h2>매일 운영되는 자체 플랫폼 2종</h2>
+        <p>고객사에 납품·운영 중인 실가동 SaaS. 컨설팅·기획·UI·백엔드·인프라까지 모두 자체 인력으로 제작·유지합니다.</p>
+      </div>
+      <div class="sl-group-head-right">Group 01 / 02</div>
+    </div>
+    <div class="sl-cards">
+      <a class="sl-card sl-card-mint reveal" href="/pages/smartfactory.html">
+        <span class="sl-card-tag">Smart Factory MES</span>
+        <span class="sl-card-cat">Solution 01 · 셀비아 납품 운영</span>
+        <h3 class="sl-card-title">ESG Motion MES</h3>
+        <p class="sl-card-desc">제조 현장의 4M(Man·Machine·Material·Method)을 실시간 추적하는 통합 운영 시스템. 9개 카테고리 41개 모듈, ESG·탄소·품질·설비까지 한 화면에서.</p>
+        <div class="sl-card-metrics">
+          <div class="sl-card-metric"><span class="sl-card-metric-num">41</span><span class="sl-card-metric-label">Modules</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">9</span><span class="sl-card-metric-label">Categories</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">A등급</span><span class="sl-card-metric-label">진단 결과</span></div>
+        </div>
+        <span class="sl-card-cta">스마트팩토리 상세 보기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+      <a class="sl-card sl-card-purple reveal" href="/pages/fupnex.html">
+        <span class="sl-card-tag">All-in-One Biz SaaS</span>
+        <span class="sl-card-cat">Solution 02 · 자체 R&amp;D</span>
+        <h3 class="sl-card-title">에프유피넥스 FUPNEX</h3>
+        <p class="sl-card-desc">벤처·이노비즈·정책자금·세무·법인설립까지 — 경영 과제 전체를 진단·가이드·전문가자문 한 흐름으로. 8개 공공기관 1차 자료 자동 연동.</p>
+        <div class="sl-card-metrics">
+          <div class="sl-card-metric"><span class="sl-card-metric-num">8</span><span class="sl-card-metric-label">Data Sources</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">21</span><span class="sl-card-metric-label">Advisory Items</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">12,847+</span><span class="sl-card-metric-label">표준 양식</span></div>
+        </div>
+        <span class="sl-card-cta">에프유피넥스 상세 보기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [SL-03] 그룹 2: 특허 기반 기술 자산 -->
+<section class="sl-group sl-g2">
+  <div class="sl-group-inner">
+    <div class="sl-group-head reveal">
+      <div class="sl-group-head-left">
+        <span class="sl-group-head-meta">Patent-Based Tech · 등록 특허 자산</span>
+        <h2>K-뷰티 차세대 기술의 핵심 특허 2건</h2>
+        <p>화장품 원료부터 큐레이션까지. 자체 출원·등록한 특허로 차별화된 제품 라인업을 구축할 수 있습니다.</p>
+      </div>
+      <div class="sl-group-head-right">Group 02 / 02</div>
+    </div>
+    <div class="sl-cards">
+      <a class="sl-card sl-card-blue reveal" href="/pages/patent-exosome.html">
+        <span class="sl-card-tag">Exosome Cosmetics</span>
+        <span class="sl-card-cat">Solution 03 · 등록 특허</span>
+        <h3 class="sl-card-title">엑소좀 화장품 특허</h3>
+        <p class="sl-card-desc">차세대 바이오 원료 '엑소좀' 기반 화장품 조성·제조 방법 특허. K-뷰티 차별화 기술로 OEM/ODM 파트너십에 직접 활용 가능합니다.</p>
+        <div class="sl-card-metrics">
+          <div class="sl-card-metric"><span class="sl-card-metric-num">6</span><span class="sl-card-metric-label">Patent Sections</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">등록</span><span class="sl-card-metric-label">특허 상태</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">K-Beauty</span><span class="sl-card-metric-label">적용 분야</span></div>
+        </div>
+        <span class="sl-card-cta">엑소좀 특허 상세 보기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+      <a class="sl-card sl-card-pink reveal" href="/pages/patent-ai-skin.html">
+        <span class="sl-card-tag">AI Skin Analysis</span>
+        <span class="sl-card-cat">Solution 04 · 등록 특허</span>
+        <h3 class="sl-card-title">AI 피부분석 큐레이션</h3>
+        <p class="sl-card-desc">AI 기반 피부 진단·맞춤 화장품 큐레이션 시스템 특허. 사용자 피부 데이터 → 제품 추천까지의 자동화 로직을 보호합니다.</p>
+        <div class="sl-card-metrics">
+          <div class="sl-card-metric"><span class="sl-card-metric-num">7</span><span class="sl-card-metric-label">Patent Sections</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">등록</span><span class="sl-card-metric-label">특허 상태</span></div>
+          <div class="sl-card-metric"><span class="sl-card-metric-num">AI</span><span class="sl-card-metric-label">큐레이션</span></div>
+        </div>
+        <span class="sl-card-cta">AI 피부분석 상세 보기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [SL-04] 추가 자산 미리보기 (상표 11건) -->
+<style>
+.sl-extra{padding:120px 40px;background:linear-gradient(180deg,var(--bg) 0%,#080808 100%)}
+.sl-extra-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.sl-extra-text h3{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-0.5px;line-height:1.3;margin:14px 0 18px}
+.sl-extra-text p{font-size:15.5px;line-height:1.75;color:rgba(255,255,255,0.65);margin-bottom:24px}
+.sl-extra-list{display:flex;gap:20px;flex-wrap:wrap}
+.sl-extra-chip{padding:10px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:24px;font-size:13px;color:rgba(255,255,255,0.85);font-weight:500}
+.sl-extra-chip strong{color:var(--c-pink);font-weight:700;margin-right:6px}
+.sl-extra-stat{text-align:center;padding:60px 40px;background:linear-gradient(135deg,rgba(255,107,157,0.05),rgba(168,100,255,0.05));border:1px solid rgba(255,107,157,0.15);border-radius:24px}
+.sl-extra-stat-num{font-size:96px;font-weight:800;line-height:1;letter-spacing:-4px;background:linear-gradient(135deg,var(--c-pink),var(--c-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl-extra-stat-label{font-size:13px;letter-spacing:3px;color:rgba(255,255,255,0.7);font-weight:600;margin-top:14px;text-transform:uppercase;display:block}
+.sl-extra-stat-sub{font-size:13px;color:var(--sub);margin-top:8px}
+@media(max-width:900px){.sl-extra-inner{grid-template-columns:1fr;gap:24px}.sl-extra{padding:90px 24px}}
+</style>
+<section class="sl-extra">
+  <div class="sl-extra-inner">
+    <div class="sl-extra-text reveal">
+      <span class="sec-label">Additional IP Portfolio</span>
+      <h3>등록 상표 11건 · 브랜드 보호 완료</h3>
+      <p>KIPRIS 검색 기준 BIZNAVI 상표 11건이 등록 완료된 상태. 자체 SaaS 브랜드와 향후 확장 라인의 상표권을 미리 확보해 두었습니다.</p>
+      <div class="sl-extra-list">
+        <span class="sl-extra-chip"><strong>11건</strong>상표 등록 완료</span>
+        <span class="sl-extra-chip"><strong>KIPRIS</strong>공식 등록</span>
+        <span class="sl-extra-chip"><strong>BIZNAVI</strong>브랜드 자산</span>
+      </div>
+    </div>
+    <div class="sl-extra-stat reveal">
+      <span class="sl-extra-stat-num">11</span>
+      <span class="sl-extra-stat-label">Registered Trademarks</span>
+      <p class="sl-extra-stat-sub">KIPRIS 등록 BIZNAVI 상표 자산</p>
+    </div>
+  </div>
+</section>
+
+<!-- [SL-05] CTA -->
+<style>
+.sl-cta{padding:140px 40px;background:radial-gradient(ellipse at center,rgba(255,255,255,0.04) 0%,var(--bg) 70%);position:relative;overflow:hidden;text-align:center}
+.sl-cta-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.sl-cta-title{font-size:clamp(32px,4.5vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:24px}
+.sl-cta-title em{font-style:normal;background:linear-gradient(135deg,var(--c-mint),var(--c-purple),var(--c-blue),var(--c-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl-cta-desc{font-size:17px;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:44px}
+.sl-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 36px;border-radius:32px;font-size:15px;font-weight:600;letter-spacing:0.5px;background:#fff;color:#000;transition:all 0.3s}
+.sl-cta-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(255,255,255,0.15)}
+.sl-cta-btn svg{width:16px;height:16px}
+.sl-cta-info{margin-top:48px;padding-top:36px;border-top:1px solid var(--border);display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.sl-cta-info-item{text-align:center}
+.sl-cta-info-label{font-size:11px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;margin-bottom:6px;display:block}
+.sl-cta-info-value{font-size:16px;color:#fff;font-weight:600}
+@media(max-width:640px){.sl-cta{padding:100px 24px}}
+</style>
+<section class="sl-cta">
+  <div class="sl-cta-inner">
+    <h2 class="sl-cta-title reveal">관심 있는 솔루션,<br/><em>직접 시연해드립니다</em></h2>
+    <p class="sl-cta-desc reveal">납품·운영 사례 데모, 특허 활용 협의, 도입 상담 — 무엇이든 한 번에 답해드립니다.</p>
+    <a class="sl-cta-btn reveal" href="mailto:fup@fupglobalpartners.com">에프유피글로벌파트너스에 문의하기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="sl-cta-info reveal">
+      <div class="sl-cta-info-item">
+        <span class="sl-cta-info-label">Email</span>
+        <span class="sl-cta-info-value">fup@fupglobalpartners.com</span>
+      </div>
+      <div class="sl-cta-info-item">
+        <span class="sl-cta-info-label">Website</span>
+        <span class="sl-cta-info-value">fupglobalpartners.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -80px 0px',threshold:0.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
