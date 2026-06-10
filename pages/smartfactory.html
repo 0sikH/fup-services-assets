@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <!--
   ============================================
   [스마트 팩토리 랜딩페이지]
@@ -10,11 +11,13 @@
      공통 스타일
 ============================================ -->
 <style>
-:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--accent-dark:#1a9d7a;--max:1200px;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
+:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#2dd4a8;--accent2:#6ee7c7;--accent-dark:#1a9d7a;--max:1200px;--font:'Pretendard Variable',Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif}
+.sf-root,.sf-root *,.sf-root *::before,.sf-root *::after{margin:0;padding:0;box-sizing:border-box;font-family:var(--font)!important}
+.sf-root{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;display:block}
+.sf-root a{text-decoration:none;color:inherit}
+.sf-root img{display:block;max-width:100%}
+.sf-root .sec-heading,.sf-root h1,.sf-root h2{font-weight:900!important}
+.sf-root .sf-hero-title{font-weight:900!important}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
 .sec{padding:120px 40px;max-width:var(--max);margin:0 auto}
 .sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
@@ -24,6 +27,8 @@ img{display:block;max-width:100%}
 @media(max-width:1024px){.sec{padding:90px 24px}}
 @media(max-width:640px){.sec{padding:70px 20px}}
 </style>
+
+<div class="sf-root">
 
 <!-- ============================================
      [SF-01] 히어로
@@ -1268,3 +1273,6 @@ img{display:block;max-width:100%}
   onScroll();
 })();
 </script>
+
+</div>
+<!-- /.sf-root -->

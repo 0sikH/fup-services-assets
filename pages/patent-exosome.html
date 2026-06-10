@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <!--
   ============================================
   [엑소좀 특허 랜딩페이지]
@@ -7,17 +8,21 @@
 -->
 
 <style>
-:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#5b9cf5;--accent2:#8bbcff;--accent-dark:#2d6fd0;--font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--max:1200px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
+:root{--bg:#050505;--card:#0c0c0c;--card2:#111;--border:#181818;--border2:#222;--text:#fff;--sub:#888;--muted:#444;--accent:#5b9cf5;--accent2:#8bbcff;--accent-dark:#2d6fd0;--font:'Pretendard Variable',Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--max:1200px}
+.px-root,.px-root *,.px-root *::before,.px-root *::after{margin:0;padding:0;box-sizing:border-box;font-family:var(--font)!important}
+.px-root{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;display:block}
+.px-root a{text-decoration:none;color:inherit}
+.px-root img{display:block;max-width:100%}
+.px-root .sec-heading,.px-root h1,.px-root h2{font-weight:900!important}
+.px-root .px-hero-title{font-weight:900!important}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
 .sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
 .sec-heading{font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:18px}
 .sec-desc{font-size:17px;line-height:1.75;color:var(--sub);max-width:640px}
 .divider{width:100%;max-width:var(--max);height:1px;background:var(--border);margin:0 auto}
 </style>
+
+<div class="px-root">
 
 <!-- [PX-01] 히어로 -->
 <style>
@@ -274,3 +279,6 @@ img{display:block;max-width:100%}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+
+</div>
+<!-- /.px-root -->
