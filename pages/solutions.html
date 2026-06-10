@@ -1,7 +1,5 @@
 <meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <!--
   ============================================
   [솔루션 인덱스 페이지 - v2]
@@ -10,14 +8,15 @@
 -->
 
 <style>
-:root{--sl-bg:#050505;--sl-card:#0c0c0c;--sl-border:#181818;--sl-border2:#222;--sl-text:#fff;--sl-sub:#888;--sl-font:'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--sl-max:1200px;
+:root{--sl-bg:#050505;--sl-card:#0c0c0c;--sl-border:#181818;--sl-border2:#222;--sl-text:#fff;--sl-sub:#888;--sl-font:'Pretendard Variable',Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;--sl-max:1200px;
   --sl-mint:#2dd4a8;--sl-purple:#a864ff;--sl-blue:#5b9cf5;--sl-pink:#ff6b9d}
-.sl-root,.sl-root *,.sl-root *::before,.sl-root *::after{margin:0;padding:0;box-sizing:border-box}
-.sl-root{background:var(--sl-bg);color:var(--sl-text);font-family:var(--sl-font);-webkit-font-smoothing:antialiased;overflow-x:hidden;display:block}
+.sl-root,.sl-root *,.sl-root *::before,.sl-root *::after{margin:0;padding:0;box-sizing:border-box;font-family:var(--sl-font)!important}
+.sl-root{background:var(--sl-bg);color:var(--sl-text);-webkit-font-smoothing:antialiased;overflow-x:hidden;display:block}
 .sl-root a{text-decoration:none;color:inherit}
 .sl-root img{display:block;max-width:100%}
-.sl-root h1,.sl-root h2,.sl-root h3,.sl-root h4{font-family:var(--sl-font);color:inherit}
-.sl-root p,.sl-root span,.sl-root li{font-family:var(--sl-font)}
+.sl-root .sl-hero-title,.sl-root .sl-sec-title,.sl-root .sl-cta-title{font-weight:900!important;letter-spacing:-2px}
+.sl-root .sl-sec-sub{font-weight:600!important}
+.sl-root .sl-vis-board-stat-num{font-weight:900!important}
 .sl-reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.sl-reveal.visible{opacity:1;transform:translateY(0)}
 .sl-divider{width:100%;max-width:var(--sl-max);height:1px;background:var(--sl-border);margin:0 auto}
 </style>
