@@ -13,8 +13,7 @@
 .px-root{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;display:block}
 .px-root a{text-decoration:none;color:inherit}
 .px-root img{display:block;max-width:100%}
-.px-root .sec-heading,.px-root h1,.px-root h2{font-weight:900!important}
-.px-root .px-hero-title{font-weight:900!important}
+.px-root .sec-heading,.px-root h1,.px-root h2,.px-root .px-hero-title{font-weight:900!important;-webkit-text-stroke:0.6px currentColor;text-stroke:0.6px currentColor}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
 .sec-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;font-weight:600}
 .sec-heading{font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-0.5px;margin-bottom:18px}
@@ -190,6 +189,56 @@
         <dt>기술 분야</dt><dd>기능성 화장품 조성물 / 바이오 화장품</dd>
         <dt>핵심 효능</dt><dd>피부 개선 · 주름 완화 · 피부 진정 · 탄력 개선</dd>
       </dl>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- [PX-04b] KIPRIS 공식 등록 확인 -->
+<style>
+.px-kipris{padding:120px 40px;background:linear-gradient(180deg,var(--bg) 0%,#050a14 50%,var(--bg) 100%)}
+.px-kipris-inner{max-width:var(--max);margin:0 auto}
+.px-kipris-head{text-align:center;margin-bottom:48px}
+.px-kipris-frame{position:relative;max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid rgba(91,156,245,0.2);background:#fff;box-shadow:0 30px 80px rgba(0,0,0,0.5),0 0 60px rgba(91,156,245,0.08)}
+.px-kipris-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#0c0c0c;border-bottom:1px solid var(--border)}
+.px-kipris-bar span{width:11px;height:11px;border-radius:50%}
+.px-kipris-bar span:nth-child(1){background:#ff5f56}
+.px-kipris-bar span:nth-child(2){background:#ffbd2e}
+.px-kipris-bar span:nth-child(3){background:#27c93f}
+.px-kipris-bar-url{margin-left:18px;font-size:11.5px;color:rgba(255,255,255,0.55);font-family:Menlo,monospace}
+.px-kipris-img-wrap{background:#fff;display:block}
+.px-kipris-img-wrap img{width:100%;display:block}
+.px-kipris-foot{margin-top:32px;text-align:center}
+.px-kipris-foot p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:18px}
+.px-kipris-foot strong{color:#fff;font-weight:700}
+.px-kipris-link{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:24px;font-size:13px;font-weight:600;color:var(--accent);border:1px solid var(--accent);transition:all 0.3s}
+.px-kipris-link:hover{background:var(--accent);color:#000;transform:translateY(-2px)}
+.px-kipris-link svg{width:13px;height:13px}
+@media(max-width:640px){.px-kipris{padding:80px 16px}}
+</style>
+<section class="px-kipris">
+  <div class="px-kipris-inner">
+    <div class="px-kipris-head reveal">
+      <span class="sec-label">KIPRIS Verification</span>
+      <h2 class="sec-heading">한국 특허정보원에서<br/>누구나 직접 확인할 수 있습니다</h2>
+      <p class="sec-desc" style="margin:18px auto 0">KIPRIS(특허청 운영 검색 시스템)에서 본 특허의 출원·등록 정보를 공개 데이터로 검증할 수 있습니다.</p>
+    </div>
+    <div class="px-kipris-frame reveal">
+      <div class="px-kipris-bar">
+        <span></span><span></span><span></span>
+        <span class="px-kipris-bar-url">kipris.or.kr · 엑소좀을 유효성분으로 함유하는 화장품 조성물</span>
+      </div>
+      <div class="px-kipris-img-wrap">
+        <img src="https://cdn.jsdelivr.net/gh/0sikH/fup-services-assets@main/pages/assets/patent-exosome/kipris-search.png" alt="KIPRIS 엑소좀 화장품 조성물 특허 검색 결과" loading="lazy"/>
+      </div>
+    </div>
+    <div class="px-kipris-foot reveal">
+      <p>출원인 · 권리자: <strong>주식회사 에프유피글로벌파트너스</strong> · 등록일자: <strong>2025</strong></p>
+      <a class="px-kipris-link" href="https://www.kipris.or.kr" target="_blank" rel="noopener">
+        KIPRIS에서 직접 검색하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
