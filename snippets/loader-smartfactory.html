@@ -1,0 +1,25 @@
+<!--
+  ============================================
+  [Loader] smartfactory.html
+  아임웹 /smartfactory 페이지의 HTML 위젯에 통째로 paste.
+  이후 GitHub의 pages/smartfactory.html을 수정·push하면 자동 반영.
+  ============================================
+-->
+<div id="fup-page-smartfactory"></div>
+<script>
+(function(){
+  var URL='https://raw.githubusercontent.com/0sikH/fup-services-assets/main/pages/smartfactory.html?t='+Date.now();
+  fetch(URL).then(function(r){return r.text()}).then(function(h){
+    var t=document.createElement('div');t.innerHTML=h;
+    t.querySelectorAll('style').forEach(function(s){
+      var n=document.createElement('style');n.textContent=s.textContent;document.head.appendChild(n);s.remove();
+    });
+    var scripts=[];
+    t.querySelectorAll('script').forEach(function(s){scripts.push(s.textContent);s.remove()});
+    document.getElementById('fup-page-smartfactory').innerHTML=t.innerHTML;
+    scripts.forEach(function(code){
+      var n=document.createElement('script');n.textContent=code;document.body.appendChild(n);
+    });
+  }).catch(function(e){console.error('smartfactory load failed:',e)});
+})();
+</script>
